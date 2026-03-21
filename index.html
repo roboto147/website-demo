@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lit Corner | Nến Thơm Thủ Công</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-title {
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+
+        .soft-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('Assets/Image/hero_banner.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .smooth-transition {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Swiper Customizations */
+        .hero-swiper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .hero-swiper .swiper-slide {
+            background-size: cover !important;
+            background-position: center !important;
+            height: 100% !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-swiper {
+            width: 100%;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .feature-swiper .swiper-slide {
+            height: auto;
+            opacity: 0.4;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: scale(0.85); /* Non-active slides are smaller */
+        }
+
+        .feature-swiper .swiper-slide-active {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+            z-index: 10;
+        }
+
+        /* Feedback Carousel: center slide sharp, side slides blurred */
+        .feedback-swiper .swiper-slide {
+            transition: filter 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+            filter: blur(3px);
+            opacity: 0.5;
+            transform: scale(0.92);
+        }
+
+        .feedback-swiper .swiper-slide-active {
+            filter: blur(0px) !important;
+            opacity: 1 !important;
+            transform: scale(1) !important;
+        }
+
+        .feedback-swiper .swiper-slide-prev,
+        .feedback-swiper .swiper-slide-next {
+            filter: blur(2px);
+            opacity: 0.6;
+            transform: scale(0.95);
+        }
+
+        .swiper-button-disabled {
+            opacity: 0.3 !important;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F9F9F7] text-[#1A1A1A]">
+
+    <div
+        class="bg-[#2C3E35] text-white text-xs text-center py-2 font-semibold tracking-wider flex items-center justify-center gap-2">
+        <i class="ph-fill ph-sparkle"></i> Freeship nội thành cho đơn từ 500K
+    </div>
+
+    <nav class="sticky top-0 w-full bg-[#F9F9F7]/95 backdrop-blur-md z-50 border-b border-gray-200 smooth-transition"
+        id="navbar">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-4">
+            <!-- LEFT: Logo + Links -->
+            <div class="flex items-center gap-8 xl:gap-12">
+                <a href="index.html" class="w-24 shrink-0 hover:opacity-70 smooth-transition">
+                    <img src="Assets/Image/logo.webp" alt="Lit Corner Logo"
+                        class="w-full object-contain mix-blend-multiply">
+                </a>
+
+                <div
+                    class="hidden lg:flex items-center gap-6 xl:gap-8 text-[15px] font-bold opacity-90 whitespace-nowrap">
+                    <a href="shop.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-storefront text-lg"></i> Cửa hàng
+                    </a>
+                    <a href="gift.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-gift text-lg"></i> Quà tặng
+                    </a>
+                    <a href="about.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-info text-lg"></i> Câu chuyện
+                    </a>
+                    <a href="blog.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-book-open-text text-lg"></i> Blog
+                    </a>
+                    <a href="orders.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-receipt text-lg"></i> Đơn mua
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Search, Cart, Login -->
+            <div class="flex items-center gap-4 xl:gap-6 shrink-0">
+                <!-- Search Bar (~15% width) -->
+                <div class="hidden md:flex relative w-48 xl:w-64">
+                    <input type="text" placeholder="Tìm kiếm..."
+                        class="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm outline-none text-[#1A1A1A] placeholder-gray-400 focus:border-amber-700 focus:ring-1 focus:ring-amber-700 smooth-transition shadow-sm">
+                    <i
+                        class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
+                </div>
+
+                <button class="md:hidden text-[#1A1A1A] hover:text-amber-700 smooth-transition">
+                    <i class="ph-bold ph-magnifying-glass text-2xl"></i>
+                </button>
+
+                <!-- Cart -->
+                <a href="cart.html" id="cart-btn"
+                    class="flex items-center gap-2 text-[#1A1A1A] hover:text-amber-700 smooth-transition group">
+                    <span class="hidden sm:inline text-[15px] font-bold">Giỏ hàng</span>
+                    <div class="relative">
+                        <i class="ph ph-shopping-cart text-[28px]"></i>
+                        <span id="cart-count"
+                            class="absolute -top-1 -right-2 bg-amber-700 text-white text-[10px] font-bold w-4 h-4 rounded-full items-center justify-center border border-[#F9F9F7]" style="opacity:0; display:none"></span>
+                    </div>
+                </a>
+
+                <!-- Login -->
+                <a href="login.html"
+                    class="flex items-center gap-2 bg-[#2C3E35] text-white px-5 py-2.5 rounded-lg border border-transparent hover:bg-amber-700 hover:shadow-md active:scale-95 smooth-transition">
+                    <span class="hidden sm:inline text-[15px] font-bold">Đăng nhập</span>
+                    <i class="ph ph-user-circle text-[22px]"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen overflow-hidden">
+        <div class="swiper hero-swiper h-full w-full">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: Focus -->
+                <div class="swiper-slide relative flex items-center justify-center text-center text-white">
+                    <div class="absolute inset-0"
+                        style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('Assets/Image/hero_banner_focus.png') center/cover no-repeat !important;">
+                    </div>
+                    <div class="relative z-10 max-w-3xl px-6 pt-10">
+                        <h1 class="hero-title text-5xl md:text-7xl font-extrabold mb-6">Tái tạo sự tập trung trong 30
+                            phút.</h1>
+                        <p class="text-lg md:text-xl opacity-90 mb-10 font-light leading-relaxed">Nến thủ công giúp
+                            thanh lọc không gian và đánh dấu thời gian làm việc chất lượng cao.</p>
+                        <div class="flex flex-col md:flex-row gap-4 justify-center">
+                            <a href="shop.html"
+                                class="bg-white text-[#2C3E35] px-10 py-4 rounded-full font-bold hover:bg-amber-100 hover:scale-105 active:scale-95 smooth-transition shadow-2xl">MUA
+                                NGAY</a>
+                            <a href="blog.html"
+                                class="backdrop-blur-md bg-white/10 border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white/20 smooth-transition">KHÁM
+                                PHÁ NGAY</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Relax -->
+                <div class="swiper-slide relative flex items-center justify-center text-center text-white">
+                    <div class="absolute inset-0"
+                        style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('Assets/Image/hero_banner_relax.png') center/cover no-repeat !important;">
+                    </div>
+                    <div class="relative z-10 max-w-3xl px-6 pt-10">
+                        <h1 class="hero-title text-5xl md:text-7xl font-extrabold mb-6">Góc tĩnh lặng cho tâm hồn.</h1>
+                        <p class="text-lg md:text-xl opacity-90 mb-10 font-light leading-relaxed">Kết hợp nến thơm và
+                            một tách trà nóng để bắt đầu hành trình thư giãn tuyệt đối.</p>
+                        <div class="flex flex-col md:flex-row gap-4 justify-center">
+                            <a href="shop.html"
+                                class="bg-white text-[#2C3E35] px-10 py-4 rounded-full font-bold hover:bg-amber-100 hover:scale-105 active:scale-95 smooth-transition shadow-2xl">XEM
+                                SẢN PHẨM</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Gift -->
+                <div class="swiper-slide relative flex items-center justify-center text-center text-white">
+                    <div class="absolute inset-0"
+                        style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('Assets/Image/hero_banner_gift.png') center/cover no-repeat !important;">
+                    </div>
+                    <div class="relative z-10 max-w-3xl px-6 pt-10">
+                        <h1 class="hero-title text-5xl md:text-7xl font-extrabold mb-6">Món quà từ thiên nhiên.</h1>
+                        <p class="text-lg md:text-xl opacity-90 mb-10 font-light leading-relaxed">Trọn vẹn tâm ý trong
+                            từng bộ quà tặng cao cấp được đóng gói thủ công.</p>
+                        <div class="flex flex-col md:flex-row gap-4 justify-center">
+                            <a href="gift.html"
+                                class="bg-white text-[#2C3E35] px-10 py-4 rounded-full font-bold hover:bg-amber-100 hover:scale-105 active:scale-95 smooth-transition shadow-2xl">LỰA
+                                QUÀ NGAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination hero-pagination !bottom-10"></div>
+        </div>
+    </header>
+
+    <!-- SECTION: FOUNDER'S STORY (Interest) -->
+    <section id="founder-story" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <!-- Left: Artistic Image -->
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -top-10 -left-10 w-64 h-64 bg-amber-50 rounded-full blur-3xl opacity-60"></div>
+                    <div class="relative rounded-[2rem] overflow-hidden soft-shadow group">
+                        <img src="Assets/Image/founder_story_home.png" alt="Founder of Lit Corner" 
+                             class="w-full aspect-[4/5] object-cover group-hover:scale-105 smooth-transition">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#2C3E35]/40 to-transparent"></div>
+                    </div>
+                    <!-- Small Float Card -->
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-2xl border border-gray-100 hidden lg:block animate-bounce-slow">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="ph-fill ph-quotes text-3xl text-amber-700"></i>
+                            <span class="text-[10px] font-bold uppercase tracking-widest opacity-40">Founder's Note</span>
+                        </div>
+                        <p class="text-sm font-serif italic text-[#2C3E35]">"Tĩnh lặng không phải là sự im lặng,<br>mà là khi bạn nghe thấy chính mình."</p>
+                    </div>
+                </div>
+
+                <!-- Right: Story Content -->
+                <div class="w-full md:w-1/2">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-700/20 text-[10px] font-bold uppercase tracking-[0.2em] mb-6 text-amber-700">
+                        <i class="ph-fill ph-heart"></i> Tâm huyết từ nhà sáng lập
+                    </div>
+                    <h2 class="hero-title text-4xl md:text-5xl font-extrabold text-[#2C3E35] mb-8 leading-tight">
+                        Khi ánh nến kể câu chuyện của tâm hồn.
+                    </h2>
+                    <div class="space-y-6 text-lg opacity-70 font-light leading-relaxed">
+                        <p>
+                            Lit Corner không bắt đầu từ một kế hoạch kinh doanh, mà từ một đêm mưa năm 2024. Giữa những áp lực bủa vây, tôi nhận ra mình đã quên mất cách "nghỉ ngơi" thật sự. 
+                        </p>
+                        <p>
+                            Chính khoảnh khắc thắp lên ngọn nến đậu nành đầu tiên, mùi hương trầm ấm lan tỏa đã giúp tôi tìm lại sự tĩnh lặng từ sâu bên trong. 
+                        </p>
+                        <p class="font-medium text-[#2C3E35] opacity-100">
+                            Tôi muốn mang cảm giác "được chữa lành" đó đến với bạn — những người đang nỗ lực mỗi ngày. 
+                        </p>
+                    </div>
+                    <div class="mt-10 flex items-center gap-6">
+                        <a href="about.html" class="bg-[#2C3E35] text-white px-8 py-4 rounded-full font-bold hover:bg-amber-700 hover:-translate-y-1 smooth-transition shadow-lg">
+                            Khám phá câu chuyện
+                        </a>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-[#2C3E35]">Minh Anh</span>
+                            <span class="text-xs opacity-50">Founder of Lit Corner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: BRAND CORE VALUES (Interest/Desire - Moved) -->
+    <section id="brand-core-values" class="py-20 bg-[#F9F9F7]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <!-- Right: Illustration Image -->
+                <div class="w-full lg:w-1/2 relative group">
+                    <div class="absolute inset-0 bg-[#2C3E35]/5 rounded-3xl rotate-3 scale-102 group-hover:rotate-0 smooth-transition"></div>
+                    <img src="Assets/Image/brand_values.png" alt="Nguyên liệu tự nhiên"
+                        class="relative w-full aspect-[4/3] object-cover rounded-3xl shadow-2xl group-hover:-translate-y-2 smooth-transition">
+                    <div class="absolute -bottom-6 -left-6 bg-[#2C3E35] text-white p-6 rounded-2xl shadow-xl hidden md:block">
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-70 mb-1">Handmade with</p>
+                        <p class="text-lg font-serif italic text-amber-200">Natural botanical wax</p>
+                    </div>
+                </div>
+
+                <!-- Left: Stats Grid -->
+                <div class="w-full lg:w-1/2">
+                    <div class="mb-12">
+                        <h2 class="hero-title text-4xl md:text-5xl font-extrabold text-[#2C3E35] mb-6">Chế tác từ sự tử tế.</h2>
+                        <p class="text-lg opacity-70 font-light leading-relaxed">
+                            Để giữ trọn lời hứa về sự tĩnh lặng, chúng tôi khắt khe trong từng nguyên liệu. Không hóa chất, không hương liệu tổng hợp — chỉ có năng lượng thuần khiết từ thiên nhiên.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-transparent shadow-sm hover:border-amber-700 smooth-transition group">
+                            <div class="w-12 h-12 flex-none aspect-square rounded-full bg-[#F9F9F7] flex items-center justify-center text-2xl text-[#2C3E35] group-hover:bg-[#2C3E35] group-hover:text-white smooth-transition">
+                                <i class="ph ph-drop"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-extrabold text-2xl text-[#2C3E35] mb-1">100%</h3>
+                                <p class="text-sm font-semibold opacity-60">Sáp hữu cơ tự nhiên</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-transparent shadow-sm hover:border-amber-700 smooth-transition group">
+                            <div class="w-12 h-12 flex-none aspect-square rounded-full bg-[#F9F9F7] flex items-center justify-center text-2xl text-[#2C3E35] group-hover:bg-[#2C3E35] group-hover:text-white smooth-transition">
+                                <i class="ph ph-wind"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-extrabold text-2xl text-[#2C3E35] mb-1">18 m²</h3>
+                                <p class="text-sm font-semibold opacity-60">Khả năng tỏa hương</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-transparent shadow-sm hover:border-amber-700 smooth-transition group">
+                            <div class="w-12 h-12 flex-none aspect-square rounded-full bg-[#F9F9F7] flex items-center justify-center text-2xl text-[#2C3E35] group-hover:bg-[#2C3E35] group-hover:text-white smooth-transition">
+                                <i class="ph ph-hourglass-high"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-extrabold text-2xl text-[#2C3E35] mb-1">30 PHÚT</h3>
+                                <p class="text-sm font-semibold opacity-60">Thời gian vàng tập trung</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-transparent shadow-sm hover:border-amber-700 smooth-transition group">
+                            <div class="w-12 h-12 flex-none aspect-square rounded-full bg-[#F9F9F7] flex items-center justify-center text-2xl text-[#2C3E35] group-hover:bg-[#2C3E35] group-hover:text-white smooth-transition">
+                                <i class="ph ph-sparkle"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-extrabold text-2xl text-[#2C3E35] mb-1">TẬN TÂM</h3>
+                                <p class="text-sm font-semibold opacity-60">Đóng gói thủ công</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="mb-16 text-center px-6">
+            <h2 class="hero-title text-3xl font-extrabold mb-3">Bộ sưu tập nổi bật</h2>
+            <p class="opacity-60 text-[15px] max-w-lg mx-auto leading-relaxed">Chắt lọc từ những nguyên liệu tinh tuý nhất, dành riêng
+                cho không gian tĩnh lặng của bạn.</p>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 relative">
+            <!-- Navigation Arrows -->
+            <button
+                class="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-[#2C3E35] hover:bg-amber-700 hover:text-white smooth-transition hover:scale-110 md:-translate-x-2">
+                <i class="ph-bold ph-caret-left text-xl"></i>
+            </button>
+            <button
+                class="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-[#2C3E35] hover:bg-amber-700 hover:text-white smooth-transition hover:scale-110 md:translate-x-2">
+                <i class="ph-bold ph-caret-right text-xl"></i>
+            </button>
+
+            <!-- Swiper Slider -->
+            <div class="swiper feature-swiper" style="overflow: hidden; padding: 20px 0;">
+                <div class="swiper-wrapper" style="align-items: stretch;">
+                        <!-- Item 1 -->
+                        <div class="swiper-slide bg-white rounded-3xl soft-shadow border border-gray-100 flex flex-col overflow-hidden cursor-pointer group hover:-translate-y-2 smooth-transition h-auto"
+                            onclick="window.location.href='product-detail.html?id=hoa-tam'">
+                            <div class="relative aspect-[4/3] bg-[#F9F9F7] overflow-hidden">
+                                <img src="Assets/Image/hoa-tam-thanh-son.webp" alt="Bộ Hoa Tâm Thanh Sơn"
+                                    class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 smooth-transition"
+                                    onerror="this.src='https://placehold.co/400x400/F9F9F7/2C3E35?text=Hoa+Tam'">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 smooth-transition flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold tracking-widest bg-white/20 backdrop-blur-[2px] px-6 py-2.5 rounded-full border border-white/40 translate-y-4 group-hover:translate-y-0 smooth-transition uppercase">Khám phá ngay</span>
+                                </div>
+                                <div class="absolute top-4 left-4 bg-[#2C3E35] text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest z-10 shadow-md">Mới ra mắt</div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1 relative">
+                                <h3 class="font-extrabold text-[22px] mb-2 text-[#1A1A1A] group-hover:text-amber-700 smooth-transition line-clamp-1">Bộ Hoa Tâm Thanh Sơn</h3>
+                                <p class="text-[13px] opacity-70 font-medium leading-relaxed mb-6 line-clamp-3">Mùi hương sen thanh khiết, kết hợp lõi sáp tự nhiên mang lại sự tĩnh tại tuyệt đối. Lựa chọn hoàn hảo cho không gian thưởng trà và thiền tịnh.</p>
+                                
+                                <div class="mt-auto flex justify-between items-end pt-4 border-t border-gray-100/80 group-hover:border-amber-700/20 smooth-transition">
+                                    <div>
+                                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1">Giá bán lẻ</p>
+                                        <p class="font-black text-[22px] text-[#2C3E35]">350.000<span class="text-sm">đ</span></p>
+                                    </div>
+                                    <button onclick="addToCart(event)"
+                                        class="w-[46px] h-[46px] bg-[#F9F9F7] text-[#1A1A1A] rounded-full hover:bg-amber-700 hover:text-white hover:scale-110 shadow-sm hover:shadow-lg smooth-transition flex justify-center items-center">
+                                        <i class="ph-bold ph-shopping-bag text-xl"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="swiper-slide bg-white rounded-3xl soft-shadow border border-gray-100 flex flex-col overflow-hidden cursor-pointer group hover:-translate-y-2 smooth-transition h-auto"
+                            onclick="window.location.href='product-detail.html?id=nen-thoi-gian'">
+                            <div class="relative aspect-[4/3] bg-[#F9F9F7] overflow-hidden">
+                                <img src="Assets/Image/nen-thoi-gian-sap-ong.webp" alt="Bộ Nến Thời Gian"
+                                    class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 smooth-transition"
+                                    onerror="this.src='https://placehold.co/400x400/F9F9F7/2C3E35?text=Nen+Thoi+Gian'">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 smooth-transition flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold tracking-widest bg-white/20 backdrop-blur-[2px] px-6 py-2.5 rounded-full border border-white/40 translate-y-4 group-hover:translate-y-0 smooth-transition uppercase">Khám phá ngay</span>
+                                </div>
+                                <div class="absolute top-4 left-4 bg-amber-700 text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest z-10 shadow-md">Best Seller</div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1 relative">
+                                <h3 class="font-extrabold text-[22px] mb-2 text-[#1A1A1A] group-hover:text-amber-700 smooth-transition line-clamp-1">Bộ Nến Thời Gian</h3>
+                                <p class="text-[13px] opacity-70 font-medium leading-relaxed mb-6 line-clamp-3">Quản lý thời gian hiệu quả bằng mùi hương. Nến tự tắt sau đúng 25, 45 hoặc 60 phút giúp duy trì nhịp độ làm việc và thư giãn tối ưu.</p>
+                                
+                                <div class="mt-auto flex justify-between items-end pt-4 border-t border-gray-100/80 group-hover:border-amber-700/20 smooth-transition">
+                                    <div>
+                                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1">Giá bán lẻ</p>
+                                        <p class="font-black text-[22px] text-[#2C3E35]">180.000<span class="text-sm">đ</span></p>
+                                    </div>
+                                    <button onclick="addToCart(event)"
+                                        class="w-[46px] h-[46px] bg-[#F9F9F7] text-[#1A1A1A] rounded-full hover:bg-amber-700 hover:text-white hover:scale-110 shadow-sm hover:shadow-lg smooth-transition flex justify-center items-center">
+                                        <i class="ph-bold ph-shopping-bag text-xl"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="swiper-slide bg-white rounded-3xl soft-shadow border border-gray-100 flex flex-col overflow-hidden cursor-pointer group hover:-translate-y-2 smooth-transition h-auto"
+                            onclick="window.location.href='product-detail.html?id=vong-nguyet-que'">
+                            <div class="relative aspect-[4/3] bg-[#F9F9F7] overflow-hidden">
+                                <img src="Assets/Image/sap-thom-vong-nguyet-que.webp" alt="Vòng Nguyệt Quế"
+                                    class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 smooth-transition"
+                                    onerror="this.src='https://placehold.co/400x400/F9F9F7/2C3E35?text=Vong+Nguyet'">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 smooth-transition flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold tracking-widest bg-white/20 backdrop-blur-[2px] px-6 py-2.5 rounded-full border border-white/40 translate-y-4 group-hover:translate-y-0 smooth-transition uppercase">Khám phá ngay</span>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1 relative">
+                                <h3 class="font-extrabold text-[22px] mb-2 text-[#1A1A1A] group-hover:text-amber-700 smooth-transition line-clamp-1">Sáp Vòng Nguyệt Quế</h3>
+                                <p class="text-[13px] opacity-70 font-medium leading-relaxed mb-6 line-clamp-3">Khối sáp thơm thủ công đính hoa cỏ tự nhiên. Hoàn toàn phù hợp để treo tủ quần áo, không gian nhỏ giúp lưu giữ hương thảo mộc an lành kéo dài.</p>
+                                
+                                <div class="mt-auto flex justify-between items-end pt-4 border-t border-gray-100/80 group-hover:border-amber-700/20 smooth-transition">
+                                    <div>
+                                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1">Giá bán lẻ</p>
+                                        <p class="font-black text-[22px] text-[#2C3E35]">130.000<span class="text-sm">đ</span></p>
+                                    </div>
+                                    <button onclick="addToCart(event)"
+                                        class="w-[46px] h-[46px] bg-[#F9F9F7] text-[#1A1A1A] rounded-full hover:bg-amber-700 hover:text-white hover:scale-110 shadow-sm hover:shadow-lg smooth-transition flex justify-center items-center">
+                                        <i class="ph-bold ph-shopping-bag text-xl"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="swiper-slide bg-white rounded-3xl soft-shadow border border-gray-100 flex flex-col overflow-hidden cursor-pointer group hover:-translate-y-2 smooth-transition h-auto"
+                            onclick="window.location.href='product-detail.html?id=nen-cay-thong'">
+                            <div class="relative aspect-[4/3] bg-[#F9F9F7] overflow-hidden">
+                                <img src="Assets/Image/nen-cay-thong-lon.webp" alt="Nến Cây Thông Lớn"
+                                    class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 smooth-transition"
+                                    onerror="this.src='https://placehold.co/400x400/F9F9F7/2C3E35?text=Cay+Thong'">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 smooth-transition flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold tracking-widest bg-white/20 backdrop-blur-[2px] px-6 py-2.5 rounded-full border border-white/40 translate-y-4 group-hover:translate-y-0 smooth-transition uppercase">Khám phá ngay</span>
+                                </div>
+                                <div class="absolute top-4 left-4 bg-[#1A1A1A] text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest z-10 shadow-md">Độc quyền</div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1 relative">
+                                <h3 class="font-extrabold text-[22px] mb-2 text-[#1A1A1A] group-hover:text-amber-700 smooth-transition line-clamp-1">Nến Cây Thông Lớn</h3>
+                                <p class="text-[13px] opacity-70 font-medium leading-relaxed mb-6 line-clamp-3">Thiết kế điêu khắc 3D tinh xảo kết hợp mùi gỗ thông và rêu phong. Quà tặng mang không khí Giáng Sinh an lành phủ khắp không gian sống.</p>
+                                
+                                <div class="mt-auto flex justify-between items-end pt-4 border-t border-gray-100/80 group-hover:border-amber-700/20 smooth-transition">
+                                    <div>
+                                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1">Giá bán lẻ</p>
+                                        <p class="font-black text-[22px] text-[#2C3E35]">120.000<span class="text-sm">đ</span></p>
+                                    </div>
+                                    <button onclick="addToCart(event)"
+                                        class="w-[46px] h-[46px] bg-[#F9F9F7] text-[#1A1A1A] rounded-full hover:bg-amber-700 hover:text-white hover:scale-110 shadow-sm hover:shadow-lg smooth-transition flex justify-center items-center">
+                                        <i class="ph-bold ph-shopping-bag text-xl"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="swiper-slide bg-white rounded-3xl soft-shadow border border-gray-100 flex flex-col overflow-hidden cursor-pointer group hover:-translate-y-2 smooth-transition h-auto"
+                            onclick="window.location.href='product-detail.html?id=khay-oval'">
+                            <div class="relative aspect-[4/3] bg-[#F9F9F7] overflow-hidden">
+                                <img src="Assets/Image/khay-oval-size_L.webp" alt="Khay Oval Size L"
+                                    class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 smooth-transition"
+                                    onerror="this.src='https://placehold.co/400x400/F9F9F7/2C3E35?text=Khay+Oval'">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 smooth-transition flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold tracking-widest bg-white/20 backdrop-blur-[2px] px-6 py-2.5 rounded-full border border-white/40 translate-y-4 group-hover:translate-y-0 smooth-transition uppercase">Khám phá ngay</span>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1 relative">
+                                <h3 class="font-extrabold text-[22px] mb-2 text-[#1A1A1A] group-hover:text-amber-700 smooth-transition line-clamp-1">Khay Xi Măng Oval</h3>
+                                <p class="text-[13px] opacity-70 font-medium leading-relaxed mb-6 line-clamp-3">Phụ kiện trang trí tông màu cát và xám vân mây tinh tế. Tạo không gian đặt nến gọn gàng, tăng vẻ đẹp tối giản cho căn phòng.</p>
+                                
+                                <div class="mt-auto flex justify-between items-end pt-4 border-t border-gray-100/80 group-hover:border-amber-700/20 smooth-transition">
+                                    <div>
+                                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1">Giá bán lẻ</p>
+                                        <p class="font-black text-[22px] text-[#2C3E35]">110.000<span class="text-sm">đ</span></p>
+                                    </div>
+                                    <button onclick="addToCart(event)"
+                                        class="w-[46px] h-[46px] bg-[#F9F9F7] text-[#1A1A1A] rounded-full hover:bg-amber-700 hover:text-white hover:scale-110 shadow-sm hover:shadow-lg smooth-transition flex justify-center items-center">
+                                        <i class="ph-bold ph-shopping-bag text-xl"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="shop.html"
+                    class="inline-flex items-center gap-2 text-[#2C3E35] font-bold border-b-2 border-[#2C3E35] pb-1 hover:text-amber-700 hover:border-amber-700 smooth-transition">
+                    Xem toàn bộ cửa hàng <i class="ph-bold ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CUSTOMER FEEDBACK (Góc Phản Hồi) -->
+    <section id="customer-feedback-section" class="py-24 bg-[#F9F9F7] overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 text-center mb-12">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#2C3E35]/20 text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-[#2C3E35]/60">
+                <i class="ph-fill ph-chat-circle-dots"></i> Tri Ân
+            </div>
+            <h2 class="hero-title text-4xl md:text-5xl font-extrabold text-[#2C3E35] mb-4">Góc Phản Hồi</h2>
+            <p class="text-lg opacity-70 font-light max-w-2xl mx-auto leading-relaxed">
+                Mỗi cảm xúc, mỗi lời nhắn gửi từ khách hàng là động lực lớn nhất để Lit Corner hoàn thiện hơn mỗi ngày.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <!-- Navigation Arrows -->
+            <button
+                class="feedback-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-[#2C3E35] hover:bg-[#2C3E35] hover:text-white smooth-transition hover:scale-110 -translate-x-2 lg:-translate-x-6">
+                <i class="ph-bold ph-caret-left text-xl"></i>
+            </button>
+            <button
+                class="feedback-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-[#2C3E35] hover:bg-[#2C3E35] hover:text-white smooth-transition hover:scale-110 translate-x-2 lg:translate-x-6">
+                <i class="ph-bold ph-caret-right text-xl"></i>
+            </button>
+
+            <div class="swiper feedback-swiper" style="overflow: hidden; padding: 20px 0;">
+                <div class="swiper-wrapper" style="align-items: center;">
+                    <!-- Feedback 1: Messenger -->
+                    <div class="swiper-slide" style="height: auto;">
+                        <div
+                            class="feedback-card bg-white p-3 rounded-2xl shadow-lg hover:shadow-2xl smooth-transition cursor-zoom-in hover:-translate-y-1">
+                            <img src="Assets/Image/feedback-1.png" alt="Phản hồi qua Messenger" data-zoom
+                                class="rounded-xl w-full">
+                        </div>
+                    </div>
+
+                    <!-- Feedback 2: Zalo -->
+                    <div class="swiper-slide" style="height: auto;">
+                        <div
+                            class="feedback-card bg-white p-3 rounded-2xl shadow-lg hover:shadow-2xl smooth-transition cursor-zoom-in hover:-translate-y-1">
+                            <img src="Assets/Image/feedback-2.png" alt="Phản hồi qua Zalo" data-zoom
+                                class="rounded-xl w-full">
+                        </div>
+                    </div>
+
+                    <!-- Feedback 3: Instagram -->
+                    <div class="swiper-slide" style="height: auto;">
+                        <div
+                            class="feedback-card bg-white p-3 rounded-2xl shadow-lg hover:shadow-2xl smooth-transition cursor-zoom-in hover:-translate-y-1">
+                            <img src="Assets/Image/feedback-3.png" alt="Phản hồi qua Instagram" data-zoom
+                                class="rounded-xl w-full">
+                        </div>
+                    </div>
+
+                    <!-- Feedback 4: WhatsApp -->
+                    <div class="swiper-slide" style="height: auto;">
+                        <div
+                            class="feedback-card bg-white p-3 rounded-2xl shadow-lg hover:shadow-2xl smooth-transition cursor-zoom-in hover:-translate-y-1">
+                            <img src="Assets/Image/feedback-4.png" alt="Phản hồi qua WhatsApp" data-zoom
+                                class="rounded-xl w-full">
+                        </div>
+                    </div>
+
+                    <!-- Feedback 5: TikTok -->
+                    <div class="swiper-slide" style="height: auto;">
+                        <div
+                            class="feedback-card bg-white p-3 rounded-2xl shadow-lg hover:shadow-2xl smooth-transition cursor-zoom-in hover:-translate-y-1">
+                            <img src="Assets/Image/feedback-5.png" alt="Phản hồi qua TikTok" data-zoom
+                                class="rounded-xl w-full">
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination feedback-pagination mt-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[#2C3E35] text-white">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2 flex justify-center relative">
+                <div
+                    class="relative w-72 h-72 md:w-96 md:h-96 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20 shadow-2xl">
+                    <img src="Assets/Image/tra-o-long-sua-thanh-son.webp" alt="Trà Ô Long Sữa Thanh Sơn"
+                        class="w-full h-full object-cover rounded-full"
+                        onerror="this.src='https://placehold.co/400x400/F9F9F7/2C3E35?text=Tra+O+Long'">
+                    <a href="product-detail.html?id=tra-o-long"
+                        class="absolute -bottom-6 -right-6 bg-amber-700 text-white font-bold p-4 rounded-full w-24 h-24 flex items-center justify-center text-center leading-tight shadow-xl rotate-12 hover:scale-110 hover:bg-[#2C3E35] smooth-transition cursor-pointer z-10 group-hover:rotate-0">
+                        Chỉ<br>95K
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/30 text-xs font-bold uppercase tracking-widest mb-6">
+                    <i class="ph-fill ph-leaf text-amber-500"></i> Góc thưởng trà
+                </div>
+                <h2 class="hero-title text-4xl md:text-5xl font-extrabold mb-4">Trà Ô Long Sữa Thanh Sơn</h2>
+                <p class="text-lg opacity-80 mb-8 font-light leading-relaxed">
+                    Sự kết hợp hoàn hảo cùng hương nến thủ công. Hậu vị ngọt nhẹ nhàng, hương thơm thoang thoảng giúp
+                    bạn duy trì trạng thái thư giãn và minh mẫn trong suốt phiên làm việc.
+                </p>
+                <button onclick="addToCart()"
+                    class="bg-white text-[#2C3E35] px-8 py-4 rounded-full font-bold hover:bg-amber-100 hover:scale-105 active:scale-95 smooth-transition shadow-lg flex items-center gap-2 justify-center md:justify-start mx-auto md:mx-0">
+                    <i class="ph-bold ph-plus"></i> Thêm vào giỏ hàng
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1A1A1A] text-white pt-16 pb-6">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Newsletter Bar -->
+            <div
+                class="flex flex-col md:flex-row items-center justify-between gap-6 pb-12 mb-12 border-b border-white/10">
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-1">Bạn muốn nhận khuyến mãi đặc biệt?</h3>
+                    <p class="text-sm opacity-50">Đăng ký ngay để nhận ưu đãi và tin tức mới nhất từ Lit Corner.</p>
+                </div>
+                <form class="flex w-full md:w-auto gap-2" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Email của bạn..."
+                        class="bg-white/10 border border-white/20 rounded-full px-5 py-3 text-sm outline-none focus:border-amber-500 smooth-transition w-full md:w-72">
+                    <button
+                        class="bg-amber-700 hover:bg-amber-600 text-white px-6 py-3 rounded-full text-sm font-bold smooth-transition whitespace-nowrap hover:scale-105">Đăng
+                        ký</button>
+                </form>
+            </div>
+
+            <!-- Main Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand -->
+                <div>
+                    <h2 class="text-2xl font-extrabold mb-3 tracking-tight">Lit Corner</h2>
+                    <p class="text-sm opacity-50 leading-relaxed mb-5">Nến thơm thủ công & phụ kiện tối giản cho không
+                        gian sống an yên. Mỗi sản phẩm là một câu chuyện được kể bằng hương thơm.</p>
+                    <div class="space-y-2 text-sm opacity-60">
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-map-pin text-amber-500"></i> TP. Hồ Chí
+                            Minh, Việt Nam</p>
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-phone text-amber-500"></i> 0901 234 567
+                        </p>
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-envelope text-amber-500"></i>
+                            hello@litcorner.vn</p>
+                    </div>
+                    <div class="flex gap-3 mt-5">
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i
+                                class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i
+                                class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i
+                                class="ph-fill ph-tiktok-logo"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i
+                                class="ph-fill ph-youtube-logo"></i></a>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Sản Phẩm</h4>
+                    <ul class="space-y-3 text-sm opacity-60">
+                        <li><a href="shop.html?q=" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Nến
+                                Thắp</a></li>
+                        <li><a href="shop.html?q=" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Nến
+                                Decor</a></li>
+                        <li><a href="shop.html?q=" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Phụ
+                                Kiện</a></li>
+                        <li><a href="shop.html?q=" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Trà
+                                Ô Long</a></li>
+                        <li><a href="gift.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Quà
+                                Tặng</a></li>
+                    </ul>
+                </div>
+
+                <!-- Info -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Thông Tin</h4>
+                    <ul class="space-y-3 text-sm opacity-60">
+                        <li><a href="about.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Giới
+                                thiệu</a></li>
+                        <li><a href="blog.html"
+                                class="hover:text-amber-500 hover:opacity-100 smooth-transition">Blog</a></li>
+                        <li><a href="policy.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính
+                                sách</a></li>
+                        <li><a href="cart.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Giỏ
+                                hàng</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Hỗ Trợ</h4>
+                    <ul class="space-y-3 text-sm opacity-60">
+                        <li><a href="policy.html#doi-tra"
+                                class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách đổi trả</a>
+                        </li>
+                        <li><a href="policy.html#van-chuyen"
+                                class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách vận
+                                chuyển</a></li>
+                        <li><a href="policy.html#bao-mat"
+                                class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách bảo mật</a>
+                        </li>
+                        <li><a href="policy.html#dieu-khoan"
+                                class="hover:text-amber-500 hover:opacity-100 smooth-transition">Điều khoản sử dụng</a>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <p class="text-xs opacity-40 mb-3">Phương thức thanh toán</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">VISA</span>
+                            <span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">MasterCard</span>
+                            <span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">Momo</span>
+                            <span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">COD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs opacity-40">© 2026 Lit Corner. Mọi quyền được bảo lưu.</p>
+                <p class="text-xs opacity-40 flex items-center gap-1">Made with <i
+                        class="ph-fill ph-heart text-amber-500"></i> by Lit Corner Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

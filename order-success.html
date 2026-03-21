@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt hàng thành công | Lit Corner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9F9F7;
+        }
+
+        .hero-title {
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+
+        .soft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .smooth-transition {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+</head>
+
+<body class="text-[#2C3E35] flex flex-col min-h-screen">
+    <div class="bg-[#2C3E35] text-white text-xs text-center py-2 font-semibold tracking-wider flex items-center justify-center gap-2">
+        <i class="ph-fill ph-sparkle"></i> Freeship nội thành cho đơn từ 500K
+    </div>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full bg-[#F9F9F7]/95 backdrop-blur-md z-50 border-b border-gray-200 smooth-transition" id="navbar">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-4">
+            <!-- LEFT: Logo + Links -->
+            <div class="flex items-center gap-8 xl:gap-12">
+                <a href="index.html" class="w-24 shrink-0 hover:opacity-70 smooth-transition">
+                    <img src="Assets/Image/logo.webp" alt="Lit Corner Logo" class="w-full object-contain mix-blend-multiply">
+                </a>
+
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8 text-[15px] font-bold opacity-90 whitespace-nowrap">
+                    <a href="shop.html" class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-storefront text-lg"></i> Cửa hàng
+                    </a>
+                    <a href="gift.html" class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-gift text-lg"></i> Quà tặng
+                    </a>
+                    <a href="about.html" class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-info text-lg"></i> Câu chuyện
+                    </a>
+                    <a href="blog.html" class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-book-open-text text-lg"></i> Blog
+                    </a>
+                    <a href="orders.html" class="flex items-center gap-1.5 text-[#1A1A1A] hover:text-amber-700 hover:-translate-y-0.5 smooth-transition">
+                        <i class="ph-fill ph-receipt text-lg"></i> Đơn mua
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Search, Cart, Login -->
+            <div class="flex items-center gap-4 xl:gap-6 shrink-0">
+                <div class="hidden md:flex relative w-48 xl:w-64">
+                    <input type="text" placeholder="Tìm kiếm..." class="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm outline-none text-[#1A1A1A] placeholder-gray-400 focus:border-amber-700 focus:ring-1 focus:ring-amber-700 smooth-transition shadow-sm">
+                    <i class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
+                </div>
+                <button class="md:hidden text-[#1A1A1A] hover:text-amber-700 smooth-transition"><i class="ph-bold ph-magnifying-glass text-2xl"></i></button>
+
+                <a href="cart.html" id="cart-btn" class="flex items-center gap-2 text-[#1A1A1A] hover:text-amber-700 smooth-transition group">
+                    <span class="hidden sm:inline text-[15px] font-bold">Giỏ hàng</span>
+                    <div class="relative">
+                        <i class="ph ph-shopping-cart text-[28px]"></i>
+                        <span id="cart-count" class="absolute -top-1 -right-2 bg-amber-700 text-white text-[10px] font-bold w-4 h-4 rounded-full items-center justify-center border border-[#F9F9F7]" style="opacity:0; display:none"></span>
+                    </div>
+                </a>
+
+                <a href="login.html" class="flex items-center gap-2 bg-[#2C3E35] text-white px-5 py-2.5 rounded-lg border border-transparent hover:bg-amber-700 hover:shadow-md active:scale-95 smooth-transition">
+                    <span class="hidden sm:inline text-[15px] font-bold">Đăng nhập</span>
+                    <i class="ph ph-user-circle text-[22px]"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-1 w-full max-w-3xl mx-auto flex flex-col items-center px-6 py-16 md:py-24 text-center">
+        <div class="w-24 h-24 md:w-28 md:h-28 bg-[#E8F3EE] text-[#2C3E35] rounded-full flex items-center justify-center mb-6 md:mb-8 mx-auto shadow-sm">
+            <i class="ph-fill ph-check-circle text-6xl md:text-7xl"></i>
+        </div>
+        
+        <h1 class="hero-title text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 text-[#2C3E35]">Đặt hàng thành công!</h1>
+        <p class="text-base md:text-lg opacity-70 mb-8 max-w-lg mx-auto font-medium">Cảm ơn bạn đã tin tưởng và ủng hộ Lit Corner.</p>
+        
+        <!-- Order Details Card -->
+        <div class="w-full bg-white p-6 md:p-8 rounded-3xl soft-shadow border border-gray-100 text-left mb-10 text-sm md:text-base">
+            <h2 class="font-bold text-lg mb-4 pb-4 border-b border-gray-100 flex items-center gap-2">
+                <i class="ph-fill ph-receipt text-amber-700"></i> Thông tin đơn hàng <span id="os-id" class="text-amber-700 ml-auto text-sm">#LIT-1234</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Shipping Info -->
+                <div class="space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-wider opacity-50 mb-1">Giao đến</p>
+                    <p class="font-bold" id="os-name">Nguyễn Văn A</p>
+                    <p class="opacity-80" id="os-phone">0901234567</p>
+                    <p class="opacity-80 leading-relaxed" id="os-address">123 Đường Số 1, Phường 1, Quận 1, TP. HCM</p>
+                </div>
+                
+                <!-- Payment Info -->
+                <div class="space-y-3 md:pl-6 md:border-l border-gray-100">
+                    <p class="text-xs font-bold uppercase tracking-wider opacity-50 mb-1">Thanh toán</p>
+                    <p class="font-bold text-[#2C3E35]" id="os-method">Thanh toán khi nhận hàng (COD)</p>
+                    <div id="os-payment-status" class="text-[11px] bg-red-100 text-red-600 px-2.5 py-1 rounded-md font-bold w-fit mt-1 uppercase tracking-wider">Chưa thanh toán</div>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                        <span class="opacity-70 font-medium">Tổng tiền:</span>
+                        <span class="text-xl font-black text-amber-700" id="os-total">475.000đ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row items-center gap-4 justify-center w-full">
+            <a href="index.html" class="w-full sm:w-auto bg-[#2C3E35] text-white px-8 py-4 rounded-full font-bold hover:bg-amber-700 hover:-translate-y-1 smooth-transition shadow-lg flex items-center justify-center gap-2">
+                <i class="ph-bold ph-house-line"></i> Về trang chủ
+            </a>
+            <a href="orders.html" class="w-full sm:w-auto bg-white text-[#2C3E35] px-8 py-4 rounded-full font-bold border border-gray-200 hover:border-amber-700 hover:text-amber-700 hover:-translate-y-1 smooth-transition shadow-sm flex items-center justify-center gap-2">
+                Tra cứu đơn hàng <i class="ph-bold ph-arrow-right"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1A1A1A] text-white pt-16 pb-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-12 mb-12 border-b border-white/10">
+                <div class="text-center md:text-left"><h3 class="text-lg font-bold mb-1">Bạn muốn nhận khuyến mãi đặc biệt?</h3><p class="text-sm opacity-50">Đăng ký ngay để nhận ưu đãi và tin tức mới nhất từ Lit Corner.</p></div>
+                <form class="flex w-full md:w-auto gap-2" onsubmit="event.preventDefault();"><input type="email" placeholder="Email của bạn..." class="bg-white/10 border border-white/20 rounded-full px-5 py-3 text-sm outline-none focus:border-amber-500 smooth-transition w-full md:w-72"><button class="bg-amber-700 hover:bg-amber-600 text-white px-6 py-3 rounded-full text-sm font-bold smooth-transition whitespace-nowrap hover:scale-105">Đăng ký</button></form>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div><h2 class="text-2xl font-extrabold mb-3 tracking-tight">Lit Corner</h2><p class="text-sm opacity-50 leading-relaxed mb-5">Nến thơm thủ công & phụ kiện tối giản cho không gian sống an yên.</p><div class="space-y-2 text-sm opacity-60"><p class="flex items-center gap-2"><i class="ph-bold ph-map-pin text-amber-500"></i> TP. Hồ Chí Minh, Việt Nam</p><p class="flex items-center gap-2"><i class="ph-bold ph-phone text-amber-500"></i> 0901 234 567</p><p class="flex items-center gap-2"><i class="ph-bold ph-envelope text-amber-500"></i> hello@litcorner.vn</p></div><div class="flex gap-3 mt-5"><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-facebook-logo"></i></a><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-instagram-logo"></i></a><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-tiktok-logo"></i></a><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-youtube-logo"></i></a></div></div>
+                <div><h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Sản Phẩm</h4><ul class="space-y-3 text-sm opacity-60"><li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Nến Thắp</a></li><li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Nến Decor</a></li><li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Phụ Kiện</a></li><li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Trà Ô Long</a></li><li><a href="gift.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Quà Tặng</a></li></ul></div>
+                <div><h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Thông Tin</h4><ul class="space-y-3 text-sm opacity-60"><li><a href="about.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Giới thiệu</a></li><li><a href="blog.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Blog</a></li><li><a href="policy.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách</a></li></ul></div>
+                <div><h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Hỗ Trợ</h4><ul class="space-y-3 text-sm opacity-60"><li><a href="policy.html#doi-tra" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách đổi trả</a></li><li><a href="policy.html#van-chuyen" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách vận chuyển</a></li><li><a href="policy.html#bao-mat" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách bảo mật</a></li><li><a href="policy.html#dieu-khoan" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Điều khoản sử dụng</a></li></ul><div class="mt-6"><p class="text-xs opacity-40 mb-3">Phương thức thanh toán</p><div class="flex gap-2 flex-wrap"><span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">VISA</span><span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">MasterCard</span><span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">Momo</span><span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">COD</span></div></div></div>
+            </div>
+            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-xs opacity-40">© 2026 Lit Corner. Mọi quyền được bảo lưu.</p><p class="text-xs opacity-40 flex items-center gap-1">Made with <i class="ph-fill ph-heart text-amber-500"></i> by Lit Corner Team</p></div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Read data from localStorage
+            const orderData = JSON.parse(localStorage.getItem('litcorner_last_order'));
+            
+            if (orderData) {
+                // Populate the UI with real data user just entered
+                document.getElementById('os-name').textContent = orderData.name;
+                document.getElementById('os-phone').textContent = orderData.phone;
+                
+                // Construct full address
+                let fullAddr = orderData.address;
+                if(orderData.district) fullAddr += `, ${orderData.district}`;
+                if(orderData.city) fullAddr += `, ${orderData.city}`;
+                document.getElementById('os-address').textContent = fullAddr;
+                
+                // Update total and ID
+                document.getElementById('os-total').textContent = orderData.total;
+                document.getElementById('os-id').textContent = '#' + orderData.orderId;
+                
+                // Update payment status dynamically
+                const methodEl = document.getElementById('os-method');
+                const statusEl = document.getElementById('os-payment-status');
+                
+                if(orderData.paymentMethod === 'ONLINE') {
+                    let methodText = 'Thanh toán trực tuyến';
+                    if(orderData.specificOnlineMethod === 'Momo') methodText = 'Ví điện tử MoMo';
+                    else if(orderData.specificOnlineMethod === 'ZaloPay') methodText = 'Ví điện tử ZaloPay';
+                    else if(orderData.specificOnlineMethod === 'VNPay') methodText = 'VNPAY-QR';
+                    else if(orderData.specificOnlineMethod === 'Card') methodText = 'Thẻ Tín Dụng / Ghi Nợ Quốc Tế';
+                    else if(orderData.specificOnlineMethod === 'Bank') methodText = 'Thẻ ATM / Internet Banking';
+
+                    methodEl.innerHTML = `Thanh toán trực tuyến <br><span class="text-[13px] opacity-70 font-medium">${methodText}</span>`;
+                    statusEl.textContent = 'ĐÃ THANH TOÁN';
+                    statusEl.className = 'text-[11px] bg-green-100 text-green-700 px-2.5 py-1 rounded-md font-bold w-fit mt-1 uppercase tracking-wider';
+                } else {
+                    methodEl.textContent = 'Thanh toán khi nhận hàng (COD)';
+                    statusEl.textContent = 'CHƯA THANH TOÁN';
+                    statusEl.className = 'text-[11px] bg-red-100 text-red-600 px-2.5 py-1 rounded-md font-bold w-fit mt-1 uppercase tracking-wider';
+                }
+            }
+            
+            // Cart was already cleared in checkout.html before redirect
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@ const productData = [
         name: 'Ly Nến Cầu Vồng',
         price: '150.000đ',
         image: 'Assets/Image/ly-nen-cong-vong.webp',
+        imageHover: 'Assets/Image/hover_ly-nen.png',
         category: 'nen-thap',
         description: 'Thiết kế ly thủy tinh hiệu ứng cầu vồng bắt mắt, mang lại vẻ đẹp lung linh huyền ảo khi thắp sáng. Phù hợp cho không gian thư giãn buổi tối.',
         details: [
@@ -19,8 +20,9 @@ const productData = [
         name: 'Bộ Nến Thời Gian',
         price: '180.000đ',
         image: 'Assets/Image/nen-thoi-gian-sap-ong.webp',
+        imageHover: 'Assets/Image/hover_nen-thoi-gian.png',
         category: 'nen-thap',
-        description: 'Bộ sưu tập nến giúp bạn quản lý thời gian làm việc (Pomodoro) một cách tự nhiên. Mỗi cây nến tương ứng với một khoảng thời gian tập trung sâu.',
+        description: 'Bộ sưu tập nến giúp bạn quản lý thời gian làm việc (Pomodoro) một cách tự nhiên. Mỗi cây nến tương ứng with một khoảng thời gian tập trung sâu.',
         details: [
             'Số lượng: 3 cây / bộ.',
             'Thời gian: 25 phút / 45 phút / 60 phút.',
@@ -33,6 +35,7 @@ const productData = [
         name: 'Nến Tealight (Set 4)',
         price: '45.000đ',
         image: 'Assets/Image/nen-tea-light.webp',
+        imageHover: 'Assets/Image/hover_nen-tealight.png',
         category: 'nen-thap',
         description: 'Bộ nến nhỏ gọn phù hợp cho việc xông tinh dầu hoặc tạo điểm nhấn ánh sáng tinh tế cho bàn tiệc, bàn làm việc.',
         details: [
@@ -47,6 +50,7 @@ const productData = [
         name: 'Nến Du Lịch Hộp Thiếc',
         price: '90.000đ',
         image: 'Assets/Image/nen-du-lich-hop-thiec-vuong.webp',
+        imageHover: 'Assets/Image/hover_nen-du-lich.png',
         category: 'nen-thap',
         description: 'Người bạn đồng hành lý tưởng cho những chuyến đi. Thiết kế hộp thiếc vuông chắc chắn, dễ dàng mang theo bất cứ đâu.',
         details: [
@@ -61,6 +65,7 @@ const productData = [
         name: 'Nến Trụ Sọc (Size L)',
         price: '150.000đ',
         image: 'Assets/Image/tru-soc-tron-size_L.webp',
+        imageHover: 'Assets/Image/hover_nen-tru-soc.png',
         category: 'nen-decor',
         description: 'Dòng nến decor với họa tiết sọc dọc tinh tế, mang phong cách kiến trúc Hy Lạp cổ điển. Tạo điểm nhấn sang trọng cho kệ sách.',
         details: [
@@ -75,6 +80,7 @@ const productData = [
         name: 'Nến Cây Thông Lớn',
         price: '120.000đ',
         image: 'Assets/Image/nen-cay-thong-lon.webp',
+        imageHover: 'Assets/Image/hover_nen-cay-thong.png',
         category: 'nen-decor',
         description: 'Thiết kế tạo hình cây thông Noel tinh xảo, mang không khí ấm áp của mùa lễ hội vào không gian của bạn.',
         details: [
@@ -89,6 +95,7 @@ const productData = [
         name: 'Bộ Hoa Tâm Thanh Sơn',
         price: '350.000đ',
         image: 'Assets/Image/hoa-tam-thanh-son.webp',
+        imageHover: 'Assets/Image/hover_hoa-tam.png',
         category: 'nen-thap',
         description: 'Sản phẩm signature của Lit Corner. Sự kết hợp giữa sáp ong và tinh dầu đặc biệt giúp thanh lọc tâm trí hiệu quả.',
         details: [
@@ -103,6 +110,7 @@ const productData = [
         name: 'Đế Nến Knot',
         price: '85.000đ',
         image: 'Assets/Image/de-knot.webp',
+        imageHover: 'Assets/Image/hover_de-knot.png',
         category: 'phu-kien',
         description: 'Phụ kiện decor với hình thắt nút hiện đại. Phù hợp để kê các dòng nến trụ hoặc nến tealight.',
         details: [
@@ -117,6 +125,7 @@ const productData = [
         name: 'Khay Oval (Size L)',
         price: '110.000đ',
         image: 'Assets/Image/khay-oval-size_L.webp',
+        imageHover: 'Assets/Image/hover_khay-oval.png',
         category: 'phu-kien',
         description: 'Khay đựng đa năng giúp sắp xếp nến và phụ kiện tinh tế. Chất liệu bền bỉ, dễ dàng vệ sinh.',
         details: [
@@ -131,6 +140,7 @@ const productData = [
         name: 'Khay Lục Giác',
         price: '90.000đ',
         image: 'Assets/Image/khay-luc-giac.webp',
+        imageHover: 'Assets/Image/hover_khay-luc-giac.png',
         category: 'phu-kien',
         description: 'Thiết kế hình học mạnh mẽ, mang lại nét hiện đại cho bàn làm việc. Giúp bảo vệ bề mặt bàn khỏi sáp nến.',
         details: [
@@ -145,6 +155,7 @@ const productData = [
         name: 'Đế Nến Vintage',
         price: '75.000đ',
         image: 'Assets/Image/de-vintage.webp',
+        imageHover: 'Assets/Image/hover_de-vintage.png',
         category: 'phu-kien',
         description: 'Đế nến phong cách cổ điển. Thiết kế tối giản giúp tôn vinh vẻ đẹp của nến và bảo vệ bề mặt bàn.',
         details: [
@@ -159,6 +170,7 @@ const productData = [
         name: 'Trà Ô Long Sữa Thanh Sơn',
         price: '95.000đ',
         image: 'Assets/Image/tra-o-long-sua-thanh-son.webp',
+        imageHover: 'Assets/Image/hover_tra-o-long.png',
         category: 'tra',
         description: 'Vị trà ngọt thanh, hương sữa nhẹ nhàng tự nhiên. Người bạn đồng hành hoàn hảo cho những buổi làm việc tập trung.',
         details: [
@@ -173,6 +185,7 @@ const productData = [
         name: 'Sáp Vòng Nguyệt Quế',
         price: '130.000đ',
         image: 'Assets/Image/sap-thom-vong-nguyet-que.webp',
+        imageHover: 'Assets/Image/hover_vong-nguyet-que.png',
         category: 'nen-decor',
         description: 'Sáp thơm treo tường với thiết kế vòng nguyệt quế thảo mộc. Mang hương thơm bền lâu cho tủ quần áo hoặc xe hơi.',
         details: [
@@ -187,6 +200,7 @@ const productData = [
         name: 'Set Góc Tỏa Hương',
         price: '350.000đ',
         image: 'Assets/Image/Giang_sinh-goc-toa-huong.webp',
+        imageHover: 'Assets/Image/hover_set-toa-huong.png',
         category: 'gift',
         description: 'Bộ quà tặng cơ bản tinh tế, phù hợp để bắt đầu hành trình thưởng nến. Thay lời chúc an lành tới người nhận.',
         details: [
@@ -201,6 +215,7 @@ const productData = [
         name: 'Set Góc Sang Trọng',
         price: '450.000đ',
         image: 'Assets/Image/Giang_sinh-goc-sang-trong.webp',
+        imageHover: 'Assets/Image/hover_set-sang-trong.png',
         category: 'gift',
         description: 'Bộ sưu tập quà tặng cao cấp nhất tại Lit Corner. Kết hợp tinh tế giữa nến sáp ong độc bản, trà thượng hạng và khay decor mỹ thuật.',
         details: [
@@ -215,6 +230,7 @@ const productData = [
         name: 'Set Góc Khoảng Riêng',
         price: '250.000đ',
         image: 'Assets/Image/Giang_sinh-goc-khoang-rieng.webp',
+        imageHover: 'Assets/Image/hover_set-khoang-rieng.png',
         category: 'gift',
         description: 'Món quà tối giản cho những tâm hồn yêu sự riêng tư. Hương thơm nhẹ nhàng giúp lấp đầy không gian nhỏ.',
         details: [
@@ -229,6 +245,7 @@ const productData = [
         name: 'Đế Nến Taper 3 Tầng',
         price: '85.000đ',
         image: 'Assets/Image/de-taper-3-tang.webp',
+        imageHover: 'Assets/Image/hover_de-taper-3-tang.png',
         category: 'phu-kien',
         description: 'Thiết kế ba tầng độc đáo, tôn vinh vẻ đẹp của nến Taper. Chất liệu bền bỉ và hiện đại.',
         details: [
@@ -325,6 +342,28 @@ const productData = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- DARK MODE THEME TOGGLE ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // Check saved theme or system preference
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        htmlElement.classList.add('dark');
+    } else {
+        htmlElement.classList.remove('dark');
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+
     // 1. Khởi tạo Giỏ hàng (Cart Init)
     let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
     
@@ -403,25 +442,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- GLOBAL SEARCH OVERLAY LOGIC ---
     const searchOverlay = document.createElement('div');
     searchOverlay.id = 'search-overlay';
-    searchOverlay.className = 'fixed inset-0 bg-[#F9F9F7]/95 backdrop-blur-md z-[100] flex flex-col items-center justify-center opacity-0 pointer-events-none smooth-transition';
+    searchOverlay.className = 'fixed inset-0 bg-[#F9F9F7]/95 dark:bg-[#1A1A1A]/95 backdrop-blur-md z-[100] flex flex-col items-center justify-center opacity-0 pointer-events-none smooth-transition';
     searchOverlay.innerHTML = `
-        <button id="close-search" class="absolute top-8 right-8 text-[#1A1A1A] hover:text-amber-700 smooth-transition hover:scale-110">
+        <button id="close-search" class="absolute top-8 right-8 text-[#1A1A1A] dark:text-white hover:text-amber-700 smooth-transition hover:scale-110">
             <i class="ph-bold ph-x text-3xl"></i>
         </button>
         <div class="w-full max-w-2xl px-6">
-            <h2 class="text-3xl font-extrabold mb-6 text-center text-[#1A1A1A]">Bạn đang tìm gì?</h2>
+            <h2 class="text-3xl font-extrabold mb-6 text-center text-[#1A1A1A] dark:text-white">Bạn đang tìm gì?</h2>
             <div class="relative mt-8">
-                <input type="text" id="search-input" placeholder="Ví dụ: Nến trà, Hoa Tâm..." class="w-full bg-white border-b-2 border-[#2C3E35] focus:border-amber-700 px-6 py-4 text-xl outline-none shadow-2xl rounded-2xl smooth-transition">
-                <button id="submit-search" class="absolute right-4 top-1/2 -translate-y-1/2 text-[#2C3E35] hover:text-amber-700 smooth-transition">
+                <input type="text" id="search-input" placeholder="Ví dụ: Nến trà, Hoa Tâm..." class="w-full bg-white dark:bg-[#2A2A2A] border-b-2 border-[#2C3E35] dark:border-amber-700 focus:border-amber-700 dark:text-white px-6 py-4 text-xl outline-none shadow-2xl rounded-2xl smooth-transition">
+                <button id="submit-search" class="absolute right-4 top-1/2 -translate-y-1/2 text-[#2C3E35] dark:text-white hover:text-amber-700 smooth-transition">
                     <i class="ph-bold ph-magnifying-glass text-2xl"></i>
                 </button>
             </div>
-            <p class="text-center mt-6 text-sm opacity-60 mb-3">Gợi ý tìm kiếm nhanh:</p>
+            <p class="text-center mt-6 text-sm opacity-60 dark:text-gray-400 mb-3">Gợi ý tìm kiếm nhanh:</p>
             <div class="flex flex-wrap justify-center gap-3">
-                <a href="shop.html?q=Hoa%20T%C3%A2m" class="px-4 py-2 bg-white rounded-full text-sm font-bold shadow-sm border border-gray-100 hover:border-amber-700 hover:text-amber-700 smooth-transition flex items-center gap-2"><i class="ph-fill ph-fire text-amber-500"></i> Bộ Hoa Tâm</a>
-                <a href="shop.html?q=Tr%C3%A0" class="px-4 py-2 bg-white rounded-full text-sm font-bold shadow-sm border border-gray-100 hover:border-amber-700 hover:text-amber-700 smooth-transition flex items-center gap-2"><i class="ph-fill ph-plant text-green-600"></i> Trà Ô Long</a>
-                <a href="shop.html?q=Th%E1%BB%9Di%20gian" class="px-4 py-2 bg-white rounded-full text-sm font-bold shadow-sm border border-gray-100 hover:border-amber-700 hover:text-amber-700 smooth-transition flex items-center gap-2"><i class="ph-fill ph-hourglass-high text-amber-800"></i> Nến Thời Gian</a>
-                <a href="shop.html?q=Vintage" class="px-4 py-2 bg-white rounded-full text-sm font-bold shadow-sm border border-gray-100 hover:border-amber-700 hover:text-amber-700 smooth-transition flex items-center gap-2"><i class="ph-fill ph-sparkle text-yellow-500"></i> Đế Nến Vintage</a>
+                <a href="shop.html?q=Hoa%20T%C3%A2m" class="px-4 py-2 bg-white dark:bg-[#2A2A2A] dark:text-white rounded-full text-sm font-bold shadow-sm border border-gray-100 dark:border-gray-700 hover:border-amber-700 hover:text-amber-700 smooth-transition flex items-center gap-2"><i class="ph-fill ph-fire text-amber-500"></i> Bộ Hoa Tâm</a>
+                <a href="shop.html?q=Tr%C3%A0" class="px-4 py-2 bg-white dark:bg-[#2A2A2A] dark:text-white rounded-full text-sm font-bold shadow-sm border border-gray-100 dark:border-gray-700 hover:border-amber-700 hover:text-amber-700 smooth-transition flex items-center gap-2"><i class="ph-fill ph-plant text-green-600"></i> Trà Ô Long</a>
+                <a href="shop.html?q=Th%E1%BB%9Di%20gian" class="px-4 py-2 bg-white dark:bg-[#2A2A2A] dark:text-white rounded-full text-sm font-bold shadow-sm border border-gray-100 dark:border-gray-700 hover:border-amber-700 hover:text-amber-700 smooth-transition flex items-center gap-2"><i class="ph-fill ph-hourglass-high text-amber-800"></i> Nến Thời Gian</a>
+                <a href="shop.html?q=Vintage" class="px-4 py-2 bg-white dark:bg-[#2A2A2A] dark:text-white rounded-full text-sm font-bold shadow-sm border border-gray-100 dark:border-gray-700 hover:border-amber-700 hover:text-amber-700 smooth-transition flex items-center gap-2"><i class="ph-fill ph-sparkle text-yellow-500"></i> Đế Nến Vintage</a>
             </div>
         </div>
     `;
@@ -521,9 +560,10 @@ document.addEventListener('DOMContentLoaded', () => {
         productGrid.innerHTML = filtered.map(p => `
             <div class="product-item bg-white p-4 rounded-2xl soft-shadow group cursor-pointer hover:-translate-y-2 hover:shadow-2xl smooth-transition"
                 data-category="${p.category}" onclick="window.location.href='product-detail.html?id=${p.id}'">
-                <div class="relative overflow-hidden rounded-xl mb-4 bg-[#F9F9F7]">
-                    <img src="${p.image}" class="w-full aspect-square object-cover mix-blend-multiply group-hover:scale-110 smooth-transition">
-                    <button class="absolute bottom-2 right-2 bg-white/90 w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 smooth-transition hover:bg-amber-700 hover:text-white"
+                <div class="product-image-container rounded-xl mb-4 bg-[#F9F9F7]">
+                    <img src="${p.image}" class="product-image-main mix-blend-multiply">
+                    <img src="${p.imageHover || p.image}" class="product-image-hover mix-blend-multiply">
+                    <button class="absolute bottom-2 right-2 bg-white/90 z-10 w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 smooth-transition hover:bg-amber-700 hover:text-white"
                         onclick="addToCart(event, '${p.id}')">
                         <i class="ph-bold ph-plus"></i>
                     </button>
@@ -617,8 +657,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="swiper-slide h-auto">
                 <div class="product-item bg-white p-4 rounded-2xl soft-shadow group cursor-pointer hover:-translate-y-2 smooth-transition h-full flex flex-col" 
                     onclick="window.location.href='product-detail.html?id=${p.id}'">
-                    <div class="relative overflow-hidden rounded-xl mb-4 bg-[#F9F9F7] aspect-square">
-                        <img src="${p.image}" class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 smooth-transition">
+                    <div class="product-image-container rounded-xl mb-4 bg-[#F9F9F7] aspect-square">
+                        <img src="${p.image}" class="product-image-main mix-blend-multiply">
+                        <img src="${p.imageHover || p.image}" class="product-image-hover mix-blend-multiply">
                     </div>
                     <div class="flex-1">
                         <p class="font-bold text-sm mb-1 group-hover:text-amber-700 smooth-transition">${p.name}</p>
@@ -639,6 +680,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    window.changeMainImage = function(thumb, src) {
+        const mainImg = document.getElementById('product-img');
+        if (mainImg) {
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+            }, 200);
+        }
+        
+        // Update active state
+        document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
+        if (thumb) thumb.classList.add('active');
+    };
+
     function initProductDetail() {
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
@@ -652,8 +708,31 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('product-price').innerText = product.price;
             const descEl = document.getElementById('product-desc');
             if(descEl) descEl.innerText = product.description;
+            
             const imgEl = document.getElementById('product-img');
-            if(imgEl) { imgEl.src = product.image; imgEl.alt = product.name; }
+            if(imgEl) { 
+                imgEl.src = product.image; 
+                imgEl.alt = product.name;
+                imgEl.style.transition = 'opacity 0.3s ease';
+            }
+
+            // Gallery Thumbnails
+            const thumbnailGrid = document.getElementById('product-thumbnails');
+            if (thumbnailGrid) {
+                const galleryImages = [product.image];
+                if (product.imageHover) galleryImages.push(product.imageHover);
+                
+                if (galleryImages.length > 1) {
+                    thumbnailGrid.innerHTML = galleryImages.map((img, index) => `
+                        <div class="product-thumbnail ${index === 0 ? 'active' : ''}" onclick="changeMainImage(this, '${img}')">
+                            <img src="${img}" alt="${product.name} thumbnail ${index + 1}">
+                        </div>
+                    `).join('');
+                } else {
+                    thumbnailGrid.innerHTML = '';
+                }
+            }
+
             const catEl = document.getElementById('product-cat');
             if(catEl) {
                 const categoryNames = { 'nen-thap': 'Nến Thắp', 'nen-decor': 'Nến Decor', 'phu-kien': 'Phụ Kiện', 'tra': 'Trà', 'gift': 'Quà Tặng' };
@@ -669,65 +748,134 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initProductDetail();
 
-    // --- CART PAGE RENDERING ---
-    if (window.location.pathname.includes('cart.html')) {
-        const cartContainer = document.getElementById('cart-items-container');
-        if (cartContainer) {
-            const itemsList = cartContainer.querySelectorAll('.flex-col.sm\\:flex-row.items-center.gap-6.pb-6');
-            itemsList.forEach(el => el.remove());
-            
-            if (cart.length > 0) {
-                cart.forEach(item => {
-                    const itemHtml = `
-                        <div class="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-gray-100 animate-fade-in">
-                            <img src="${item.image}" class="w-24 h-24 object-cover rounded-xl bg-[#F9F9F7]">
-                            <div class="flex-1 text-center sm:text-left">
-                                <h3 class="font-bold text-lg text-[#2C3E35]">${item.name}</h3>
-                                <p class="text-sm opacity-60">${item.category}</p>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="flex items-center border border-gray-200 rounded-full">
-                                    <span class="w-12 text-center text-sm font-bold">x${item.qty}</span>
-                                </div>
-                                <p class="font-bold text-lg w-28 text-right text-amber-700">${item.price}</p>
-                                <button onclick="removeFromStorage('${item.id}')" class="text-gray-400 hover:text-red-500 smooth-transition">
-                                    <i class="ph-bold ph-trash text-xl"></i>
-                                </button>
-                            </div>
-                        </div>
-                    `;
-                    const continueLink = cartContainer.querySelector('a[href="shop.html"]');
-                    if (continueLink) continueLink.insertAdjacentHTML('beforebegin', itemHtml);
-                    else cartContainer.insertAdjacentHTML('beforeend', itemHtml);
-                });
-            } else {
-                cartContainer.insertAdjacentHTML('afterbegin', `
-                    <div class="text-center py-12 animate-fade-in">
-                        <i class="ph-bold ph-shopping-cart text-6xl text-gray-200 mb-4"></i>
-                        <h3 class="text-xl font-bold text-[#2C3E35] mb-2">Giỏ hàng của bạn đang trống</h3>
-                        <p class="text-sm opacity-60 mb-6">Hãy lấp đầy giỏ hàng bằng những món quà ý nghĩa từ Lit Corner nhé!</p>
-                        <a href="shop.html" class="inline-block bg-[#2C3E35] text-white px-8 py-3 rounded-full font-bold hover:bg-amber-700 smooth-transition">Khám phá ngay</a>
-                    </div>
-                `);
-            }
-        }
-        
-        const subtotal = cart.reduce((sum, item) => sum + (parseInt(item.price.replace(/\D/g, '')) * item.qty), 0);
-        const subtotalEl = document.getElementById('subtotal-price');
-        if (subtotalEl) subtotalEl.innerText = new Intl.NumberFormat('vi-VN').format(subtotal) + 'đ';
-        
-        const totalEl = document.getElementById('total-price');
-        if (totalEl) totalEl.innerText = new Intl.NumberFormat('vi-VN').format(subtotal + (subtotal > 0 ? 30000 : 0)) + 'đ';
-        
-        const subtotalText = document.getElementById('subtotal-text');
-        if (subtotalText) subtotalText.innerText = `Tạm tính (${cart.length} sản phẩm)`;
+    // --- CART & CHECKOUT RENDERING ---
+    function formatPrice(num) {
+        return new Intl.NumberFormat('vi-VN').format(num) + 'đ';
     }
+
+    window.renderCartPage = function() {
+        const cartContainer = document.getElementById('cart-items-container');
+        if (!cartContainer) return;
+
+        // Clear existing static items (except the "Continue Shopping" link)
+        const items = cartContainer.querySelectorAll('.flex-col.sm\\:flex-row.items-center.gap-6.pb-6');
+        items.forEach(el => el.remove());
+
+        const subtotal = cart.reduce((sum, item) => sum + (parseInt(item.price.replace(/\D/g, '')) * item.qty), 0);
+        const shipping = subtotal > 0 ? 30000 : 0;
+        const total = subtotal + shipping;
+
+        if (cart.length > 0) {
+            cart.forEach(item => {
+                const itemHtml = `
+                    <div class="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-gray-100 animate-fade-in group">
+                        <img src="${item.image}" class="w-24 h-24 object-cover rounded-xl bg-[#F9F9F7] mix-blend-multiply">
+                        <div class="flex-1 text-center sm:text-left">
+                            <h3 class="font-bold text-lg text-[#2C3E35] dark:text-white">${item.name}</h3>
+                            <p class="text-sm opacity-60 dark:text-gray-400 font-medium">${item.category}</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center border border-gray-200 dark:border-gray-600 rounded-full">
+                                <button onclick="changeQty('${item.id}', -1)" class="w-8 h-8 flex items-center justify-center hover:text-amber-700 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-full smooth-transition"><i class="ph-bold ph-minus text-xs"></i></button>
+                                <span class="w-8 text-center text-sm font-bold dark:text-white">${item.qty}</span>
+                                <button onclick="changeQty('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center hover:text-amber-700 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-full smooth-transition"><i class="ph-bold ph-plus text-xs"></i></button>
+                            </div>
+                            <p class="font-bold text-lg w-28 text-right text-amber-700 font-mono">${formatPrice(parseInt(item.price.replace(/\D/g, '')) * item.qty)}</p>
+                            <button onclick="removeFromStorage('${item.id}')" class="text-gray-400 hover:text-red-500 smooth-transition ml-2">
+                                <i class="ph-bold ph-trash text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                const continueLink = cartContainer.querySelector('a[href="shop.html"]');
+                if (continueLink) continueLink.insertAdjacentHTML('beforebegin', itemHtml);
+                else cartContainer.insertAdjacentHTML('beforeend', itemHtml);
+            });
+        } else {
+            cartContainer.insertAdjacentHTML('afterbegin', `
+                <div class="text-center py-12 animate-fade-in">
+                    <i class="ph-bold ph-shopping-cart text-6xl text-gray-200 mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#2C3E35] dark:text-white mb-2">Giỏ hàng của bạn đang trống</h3>
+                    <p class="text-sm opacity-60 dark:text-gray-400 mb-6 font-medium">Hãy lấp đầy giỏ hàng bằng những món quà ý nghĩa từ Lit Corner nhé!</p>
+                    <a href="shop.html" class="inline-block bg-[#2C3E35] text-white px-8 py-3 rounded-full font-bold hover:bg-amber-700 smooth-transition">Khám phá ngay</a>
+                </div>
+            `);
+        }
+
+        // Update Summary Sidebar in Cart
+        const subtotalPctEl = document.getElementById('subtotal-text');
+        const subtotalValEl = document.getElementById('subtotal-price');
+        const shippingValEl = document.getElementById('shipping-price');
+        const totalValEl = document.getElementById('total-price');
+
+        if (subtotalPctEl) subtotalPctEl.innerText = `Tạm tính (${cart.length} sản phẩm)`;
+        if (subtotalValEl) subtotalValEl.innerText = formatPrice(subtotal);
+        if (shippingValEl) shippingValEl.innerText = formatPrice(shipping);
+        if (totalValEl) totalValEl.innerText = formatPrice(total);
+    };
+
+    window.renderCheckoutPage = function() {
+        const checkoutItemsContainer = document.getElementById('checkout-items');
+        if (!checkoutItemsContainer) return;
+
+        checkoutItemsContainer.innerHTML = '';
+        const subtotal = cart.reduce((sum, item) => sum + (parseInt(item.price.replace(/\D/g, '')) * item.qty), 0);
+        const shipping = subtotal > 0 ? 30000 : 0;
+        const total = subtotal + shipping;
+
+        if (cart.length === 0 && !window.location.pathname.includes('order-success.html')) {
+            window.location.href = 'cart.html';
+            return;
+        }
+
+        cart.forEach(item => {
+            const itemHtml = `
+                <div class="flex items-center gap-4 animate-fade-in">
+                    <div class="relative">
+                        <img src="${item.image}" class="w-16 h-16 rounded-xl object-cover bg-[#F9F9F7] mix-blend-multiply border border-gray-200 dark:border-gray-600">
+                        <span class="absolute -top-2 -right-2 w-5 h-5 bg-[#2C3E35] text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-white dark:border-[#2A2A2A]">${item.qty}</span>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm leading-tight mb-1 dark:text-white">${item.name}</h4>
+                        <p class="text-[10px] opacity-60 bg-gray-100 dark:bg-gray-700 dark:text-gray-300 w-fit px-2 rounded-md font-bold uppercase tracking-wider">${item.category}</p>
+                    </div>
+                    <span class="font-bold text-amber-700 text-sm font-mono">${formatPrice(parseInt(item.price.replace(/\D/g, '')) * item.qty)}</span>
+                </div>
+            `;
+            checkoutItemsContainer.insertAdjacentHTML('beforeend', itemHtml);
+        });
+
+        const subtotalEl = document.getElementById('checkout-subtotal');
+        const shippingEl = document.getElementById('checkout-shipping');
+        const totalEl = document.getElementById('checkout-total');
+
+        if (subtotalEl) subtotalEl.innerText = formatPrice(subtotal);
+        if (shippingEl) shippingEl.innerText = formatPrice(shipping);
+        if (totalEl) totalEl.innerText = formatPrice(total);
+    };
+
+    window.changeQty = function(id, delta) {
+        const item = cart.find(i => i.id === id);
+        if (item) {
+            item.qty += delta;
+            if (item.qty < 1) {
+                cart = cart.filter(i => i.id !== id);
+            }
+            updateCartCount();
+            if (window.location.pathname.includes('cart.html')) renderCartPage();
+            if (window.location.pathname.includes('checkout.html')) renderCheckoutPage();
+        }
+    };
 
     window.removeFromStorage = function(id) {
         cart = cart.filter(item => item.id !== id);
         updateCartCount();
-        window.location.reload();
+        if (window.location.pathname.includes('cart.html')) renderCartPage();
+        if (window.location.pathname.includes('checkout.html')) renderCheckoutPage();
     };
+
+    if (window.location.pathname.includes('cart.html')) renderCartPage();
+    if (window.location.pathname.includes('checkout.html')) renderCheckoutPage();
 
     // --- HOME PAGE SOCIAL PROOF (PURCHASE NOTIFICATIONS) ---
     function initSocialProof() {
@@ -859,7 +1007,63 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- PROMO POPUP LOGIC ---
+    function initPromoPopup() {
+        const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html') || window.location.pathname.includes('LitCorner_Web');
+        if (!isHomePage) return;
+
+        const popup = document.getElementById('promo-popup');
+        const closeBtn = document.getElementById('close-promo');
+        const form = document.getElementById('promo-form');
+        const successContent = document.getElementById('promo-success');
+        const closeSuccessBtn = document.getElementById('close-promo-success');
+        
+        if (!popup) return;
+
+        // Check if user already saw or closed the popup this session
+        const hasSeenPromo = sessionStorage.getItem('seenPromo');
+        
+        if (!hasSeenPromo) {
+            // Show popup after 2.5 seconds
+            setTimeout(() => {
+                popup.classList.remove('opacity-0', 'pointer-events-none');
+                popup.classList.add('opacity-100');
+                popup.querySelector('.bg-white').classList.replace('scale-95', 'scale-100');
+            }, 2500);
+        }
+
+        function dismissPopup() {
+            popup.querySelector('.bg-white').classList.replace('scale-100', 'scale-95');
+            popup.classList.remove('opacity-100');
+            popup.classList.add('opacity-0', 'pointer-events-none');
+            sessionStorage.setItem('seenPromo', 'true');
+        }
+
+        closeBtn.addEventListener('click', dismissPopup);
+        if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', dismissPopup);
+        
+        // Close on clicking outside the modal box
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) dismissPopup();
+        });
+
+        window.submitPromo = function() {
+            // Simulate form submisson success
+            const email = document.getElementById('promo-email').value;
+            const phone = document.getElementById('promo-phone').value;
+            if (email && phone) {
+                form.classList.add('hidden');
+                successContent.classList.remove('hidden');
+                successContent.classList.add('flex');
+                
+                // Optional: Copy code to clipboard automatically
+                navigator.clipboard.writeText('LITNEW15').catch(err => console.log('Clipboard err:', err));
+            }
+        };
+    }
+
     initFeedbackCarousel();
     initLightbox();
     initSocialProof();
+    initPromoPopup();
 });

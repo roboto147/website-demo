@@ -1,0 +1,575 @@
+body {
+            font-family: 'Inter', sans-serif;
+}
+
+
+.hero-title {
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+}
+
+
+.soft-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+}
+
+
+.smooth-transition {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.story-gradient {
+            background: linear-gradient(to right, #F9F9F7 0%, rgba(249, 249, 247, 0) 100%);
+}
+
+
+body { font-family: 'Inter', sans-serif;
+}
+
+
+.hero-title { letter-spacing: -0.04em; line-height: 1.1;
+}
+
+
+.soft-shadow { box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+}
+
+
+.smooth-transition { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.blog-content p { margin-bottom: 1.5rem; line-height: 1.8; opacity: 0.85;
+}
+
+
+.blog-content h2 { font-size: 1.875rem; font-weight: 800; color: #2C3E35; margin-top: 3rem; margin-bottom: 1rem;
+}
+
+
+.blog-content h3 { font-size: 1.25rem; font-weight: 700; color: #1A1A1A; margin-top: 2rem; margin-bottom: 0.75rem;
+}
+
+
+.soft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+
+.smooth-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+body { font-family: 'Inter', sans-serif; background-color: #F9F9F7;
+}
+
+
+.soft-shadow { box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+
+.smooth-transition { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.hero-title { letter-spacing: -0.03em; line-height: 1.1;
+}
+
+
+.smooth-transition { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.hero-gradient {
+            background: linear-gradient(rgba(44, 62, 53, 0.8), rgba(44, 62, 53, 0.9)), url('Assets/Image/Giang_sinh-goc-sang-trong.webp');
+            background-size: cover;
+            background-position: center;
+}
+
+
+.hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('Assets/Image/hero_banner.png');
+            background-size: cover;
+            background-position: center;
+}
+
+.hero-gradient {
+            background: linear-gradient(rgba(44, 62, 53, 0.8), rgba(44, 62, 53, 0.9)), url('Assets/Image/Giang_sinh-goc-sang-trong.webp');
+            background-size: cover;
+            background-position: center;
+}
+
+
+.hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('Assets/Image/hero_banner.png');
+            background-size: cover;
+            background-position: center;
+}
+
+
+.smooth-transition {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* Swiper Customizations */
+.hero-swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-swiper .swiper-slide {
+    background-size: cover !important;
+    background-position: center !important;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-swiper {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.feature-swiper .swiper-slide {
+    height: auto;
+    opacity: 1; /* Removed opacity fade as user might consider it part of the 'blur' effect */
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(0.95);
+}
+
+.feature-swiper .swiper-slide-active {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    z-index: 10;
+}
+
+
+/* Feedback Carousel: center slide sharp, side slides blurred */
+.feedback-swiper .swiper-slide {
+    transition: transform 0.5s ease;
+    opacity: 1;
+    transform: scale(0.92);
+}
+
+.feedback-swiper .swiper-slide-active {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+.feedback-swiper .swiper-slide-prev,
+.feedback-swiper .swiper-slide-next {
+    opacity: 1;
+    transform: scale(0.95);
+}
+
+
+.swiper-button-disabled {
+            opacity: 0.3 !important;
+            cursor: not-allowed;
+}
+
+
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9F9F7;
+}
+
+
+.hero-title {
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+}
+
+
+.soft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+
+.smooth-transition {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.policy-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease;
+}
+
+
+.policy-content.open { max-height: 2000px;
+}
+
+
+.policy-toggle i { transition: transform 0.3s ease;
+}
+
+
+.policy-toggle.open i { transform: rotate(180deg);
+}
+
+
+.hero-title {
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+}
+
+
+.filter-btn.active {
+            background-color: #2C3E35;
+            color: white;
+            border-color: #2C3E35;
+}
+
+/* Product Hover Slide Effect */
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.product-image-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    transition: left 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-image-hover {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    transition: left 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* For direct product items */
+.product-item:hover .product-image-main {
+    left: -100%;
+}
+
+.product-item:hover .product-image-hover {
+    left: 0;
+}
+
+/* For swiper slides and other groups */
+.group:hover .product-image-main {
+    left: -100%;
+}
+
+.group:hover .product-image-hover {
+    left: 0;
+}
+
+/* Product Detail Gallery Thumbnails */
+.product-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    background-color: #F9F9F7;
+    flex-shrink: 0;
+}
+
+.product-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+.product-thumbnail.active {
+    border-color: #B45309; /* amber-700 equivalent */
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.product-thumbnail:hover:not(.active) {
+    border-color: rgba(180, 83, 9, 0.3);
+}
+
+/* Gold Light Sweep Effect */
+@keyframes light-sweep {
+    0%, 20% { transform: translateX(-150%) skewX(-45deg); }
+    80%, 100% { transform: translateX(200%) skewX(-45deg); }
+}
+.light-sweep-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%);
+    animation: light-sweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.green-sweep-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(74,222,128,0) 0%, rgba(74,222,128,0.3) 50%, rgba(74,222,128,0) 100%);
+    animation: light-sweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ===========================
+   DARK MODE GLOBAL OVERRIDES
+   =========================== */
+
+/* Color scheme hint for scrollbars & form controls */
+html.dark {
+    color-scheme: dark;
+}
+
+/* Body */
+html.dark body {
+    background-color: #111111 !important;
+    color: #e5e5e5 !important;
+}
+
+/* Navbar */
+html.dark nav {
+    background-color: rgba(17, 17, 17, 0.95) !important;
+    border-color: #333 !important;
+}
+
+/* All sections with light backgrounds */
+html.dark section {
+    background-color: #111111 !important;
+}
+
+html.dark section.bg-white,
+html.dark div.bg-white {
+    background-color: #1a1a1a !important;
+}
+
+/* Header */
+html.dark header {
+    background-color: #111111 !important;
+}
+
+/* Footer */
+html.dark footer {
+    background-color: #0a0a0a !important;
+}
+
+/* Cards, product items, and containers */
+html.dark .bg-white,
+html.dark .bg-white\/90 {
+    background-color: #1e1e1e !important;
+}
+
+/* Specific Tailwind arbitrary bg overrides */
+html.dark [class*="bg-[#F9F9F7]"] {
+    background-color: #151515 !important;
+}
+
+html.dark [class*="bg-amber-50"] {
+    background-color: #1e1e1e !important;
+}
+
+html.dark [class*="bg-white/"] {
+    background-color: rgba(30, 30, 30, 0.9) !important;
+}
+
+/* Top announcement bar - keep as is (dark green) */
+
+/* Text color overrides */
+html.dark [class*="text-[#1A1A1A]"] {
+    color: #e5e5e5 !important;
+}
+
+html.dark [class*="text-[#2C3E35]"] {
+    color: #b0c4b1 !important;
+}
+
+html.dark h1, html.dark h2, html.dark h3, html.dark h4 {
+    color: #f0f0f0 !important;
+}
+
+html.dark p {
+    color: #cccccc !important;
+}
+
+html.dark a:not([class*="bg-"]):not([class*="text-white"]) {
+    color: #d4d4d4 !important;
+}
+
+html.dark a:hover {
+    color: #d4a017 !important;
+}
+
+/* Input fields */
+html.dark input,
+html.dark select,
+html.dark textarea {
+    background-color: #222 !important;
+    border-color: #444 !important;
+    color: #e5e5e5 !important;
+}
+
+html.dark input::placeholder {
+    color: #888 !important;
+}
+
+/* Border overrides */
+html.dark [class*="border-gray"] {
+    border-color: #333 !important;
+}
+
+html.dark [class*="border-white/10"] {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Product cards - ONLY feature and feedback swipers, NOT hero swiper */
+html.dark .feature-swiper .swiper-slide > div,
+html.dark .product-item {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+}
+
+/* Hero swiper slides - keep transparent so banner images show through */
+html.dark .hero-swiper .swiper-slide,
+html.dark .hero-swiper .swiper-slide > div {
+    background-color: transparent !important;
+}
+
+/* Disable mix-blend-multiply in dark mode (it darkens images on dark bg) */
+html.dark .mix-blend-multiply,
+html.dark .product-image-main,
+html.dark .product-image-hover {
+    mix-blend-mode: normal !important;
+}
+
+/* Product image container - lighter in dark mode */
+html.dark .product-image-container {
+    background-color: #f0f0f0 !important;
+}
+
+/* Feedback cards */
+html.dark .feedback-card {
+    background-color: #1e1e1e !important;
+}
+
+/* Swiper navigation buttons */
+html.dark .swiper-button-prev-custom,
+html.dark .swiper-button-next-custom,
+html.dark .feedback-prev,
+html.dark .feedback-next {
+    background-color: rgba(30, 30, 30, 0.9) !important;
+    color: #e5e5e5 !important;
+}
+
+/* Trust badges section */
+html.dark section [class*="divide-gray"] > div {
+    border-color: #333 !important;
+}
+
+/* Pop-up / Modal overrides */
+html.dark #promo-popup .bg-white {
+    background-color: #1e1e1e !important;
+}
+
+html.dark #search-overlay {
+    background-color: rgba(17, 17, 17, 0.95) !important;
+}
+
+/* Soft shadow in dark mode */
+html.dark .soft-shadow {
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Keep green/dark sections as they are */
+html.dark section[class*="bg-[#2C3E35]"],
+html.dark div[class*="bg-[#2C3E35]"] {
+    background-color: #1a2620 !important;
+}
+
+/* Opacity text adjustments */
+html.dark [class*="opacity-70"],
+html.dark [class*="opacity-60"],
+html.dark [class*="opacity-50"] {
+    opacity: 0.7 !important;
+}
+
+/* Maintain dark text color for specific elements in dark mode */
+html.dark .keep-dark-text,
+html.dark .keep-dark-text p,
+html.dark .keep-dark-text span {
+    color: #1A1A1A !important;
+}
+
+/* Floating Contact Buttons Animations */
+.contact-btn {
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+}
+
+.contact-btn .icon-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    animation: contact-shake 2.2s infinite;
+}
+
+.contact-btn .ripple {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    animation: contact-ripple 2.2s infinite;
+}
+
+@keyframes contact-shake {
+    0%, 71% { transform: rotate(0) scale(1); }
+    77% { transform: rotate(-15deg) scale(1.1); }
+    83% { transform: rotate(15deg) scale(1.1); }
+    89% { transform: rotate(-15deg) scale(1.1); }
+    95% { transform: rotate(15deg) scale(1.1); }
+    100% { transform: rotate(0) scale(1); }
+}
+
+@keyframes contact-ripple {
+    0%, 71% { transform: scale(1); opacity: 0; }
+    72% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(2.2); opacity: 0; }
+}
+

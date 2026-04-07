@@ -7,14 +7,13 @@
     <title>Đặt hàng thành công | Lit Corner</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             darkMode: 'class',
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <script>
         // Apply theme immediately to prevent flash of wrong theme
@@ -24,8 +23,8 @@
     </script>
 </head>
 
-<body class="text-[#2C3E35] flex flex-col min-h-screen"> 
-        <!-- Floating Dark Mode Toggle -->
+<body class="bg-[#F9F9F7] text-[#1A1A1A] dark:bg-[#1A1A1A] dark:text-[#F9F9F7] smooth-transition flex flex-col min-h-screen">
+    <!-- Floating Dark Mode Toggle -->
     <div class="fixed left-6 top-1/2 -translate-y-1/2 z-[200]">
         <button id="theme-toggle" class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-xl rounded-full w-12 h-12 flex items-center justify-center hover:scale-110 active:scale-95 smooth-transition group">
             <div class="text-[#1A1A1A] dark:text-amber-400 group-hover:text-amber-700 dark:group-hover:text-amber-300 smooth-transition">
@@ -35,42 +34,48 @@
         </button>
     </div>
 
-<nav class="sticky top-0 w-full bg-[#F9F9F7]/95 dark:bg-[#1A1A1A]/95 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700 smooth-transition" id="navbar">
+            <nav class="sticky top-0 w-full bg-[#F9F9F7]/95 dark:bg-[#1A1A1A]/95 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700 smooth-transition" id="navbar">
         <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-4">
             <!-- LEFT: Logo + Links -->
             <div class="flex items-center gap-8 xl:gap-12">
-                <a href="index.html" class="w-24 shrink-0 hover:opacity-70 smooth-transition">
-                    <img src="Assets/Image/logo.webp" alt="Lit Corner Logo" class="w-full object-contain mix-blend-multiply">
+                <a href="index.html"
+                    class="w-24 shrink-0 hover:scale-[0.97] active:scale-95 smooth-transition mix-blend-multiply origin-left">
+                    <img src="Assets/Image/logo.webp" alt="Lit Corner Logo" class="w-full object-contain block">
                 </a>
 
-                <div class="hidden lg:flex items-center gap-4 xl:gap-6 text-[15px] font-bold text-[#1A1A1A]/90 dark:text-white/60 whitespace-nowrap">
-                                        <!-- Products Dropdown -->
+                <div
+                    class="hidden lg:flex items-center gap-4 xl:gap-6 text-[15px] font-bold text-[#1A1A1A]/90 dark:text-white/60 whitespace-nowrap">
+                    <!-- Products Dropdown -->
                     <div class="relative group h-full flex items-center">
                         <a href="shop.html"
                             class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition cursor-pointer py-2">
                             <i class="ph-fill ph-storefront text-lg"></i> Sản phẩm
                             <i class="ph-bold ph-caret-down text-[10px] opacity-70 ml-0.5 transform group-hover:rotate-180 transition-transform"></i>
                         </a>
-                        
                         <!-- Dropdown Menu -->
                         <div class="absolute top-10 left-0 bg-white border border-gray-100 shadow-[0_15px_40px_rgba(0,0,0,0.06)] rounded-xl py-3 min-w-[240px] opacity-0 pointer-events-none translate-y-3 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 z-[100] before:content-[''] before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
                             <a href="shop.html" class="block px-6 py-2.5 text-[15px] font-bold text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Tất cả sản phẩm</a>
                             <div class="w-full h-px bg-gray-100 my-1"></div>
-                            <a href="shop.html?filter=nen-thap" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Nến thơm thủ công</a>
-                            <a href="shop.html?filter=nen-decor" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Sáp thơm trang trí</a>
-                            <a href="shop.html?filter=phu-kien" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Phụ kiện nến</a>
+                            <a href="shop.html?filter=nen-thap" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Nến Thắp &amp; Thư giãn</a>
+                            <a href="shop.html?filter=nen-decor" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Nến Trang Trí</a>
+                            <a href="shop.html?filter=phu-kien" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Phụ Kiện Trang Trí</a>
+                            <a href="shop.html?filter=tra" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Trà Thanh Lọc</a>
                         </div>
                     </div>
-                    <a href="gift.html" class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
+                    <a href="gift.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
                         <i class="ph-fill ph-gift text-lg"></i> Quà tặng
                     </a>
-                    <a href="about.html" class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
+                    <a href="about.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
                         <i class="ph-fill ph-info text-lg"></i> Câu chuyện
                     </a>
-                    <a href="blog.html" class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
+                    <a href="blog.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
                         <i class="ph-fill ph-book-open-text text-lg"></i> Cảm hứng
                     </a>
-                    <a href="orders.html" class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
+                    <a href="orders.html"
+                        class="flex items-center gap-1.5 text-amber-700 dark:text-amber-400 dark:bg-amber-500/10 dark:px-3 dark:py-1.5 dark:rounded-md hover:-translate-y-0.5 smooth-transition">
                         <i class="ph-fill ph-receipt text-lg"></i> Đơn mua
                     </a>
                 </div>
@@ -78,21 +83,33 @@
 
             <!-- RIGHT: Search, Cart, Login -->
             <div class="flex items-center gap-4 xl:gap-6 shrink-0">
+                <!-- Search Bar (~15% width) -->
                 <div class="hidden md:flex relative w-48 xl:w-64">
-                    <input type="text" placeholder="Tìm kiếm..." class="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm outline-none text-[#1A1A1A] placeholder-gray-400 focus:border-amber-700 focus:ring-1 focus:ring-amber-700 smooth-transition shadow-sm">
-                    <i class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
+                    <input type="text" placeholder="Tìm kiếm..."
+                        class="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm outline-none text-[#1A1A1A] placeholder-gray-400 focus:border-amber-700 focus:ring-1 focus:ring-amber-700 smooth-transition shadow-sm">
+                    <i
+                        class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
                 </div>
-                <button class="md:hidden text-[#1A1A1A] hover:text-amber-700 smooth-transition"><i class="ph-bold ph-magnifying-glass text-2xl"></i></button>
 
-                <a href="cart.html" id="cart-btn" class="flex items-center gap-2 text-[#1A1A1A] hover:text-amber-700 smooth-transition group">
+                <button class="md:hidden text-[#1A1A1A] hover:text-amber-700 smooth-transition">
+                    <i class="ph-bold ph-magnifying-glass text-2xl"></i>
+                </button>
+
+                <!-- Cart -->
+                <a href="cart.html" id="cart-btn"
+                    class="flex items-center gap-2 text-[#1A1A1A] hover:text-amber-700 smooth-transition group">
                     <span class="hidden sm:inline text-[15px] font-bold">Giỏ hàng</span>
                     <div class="relative">
                         <i class="ph ph-shopping-cart text-[28px]"></i>
-                        <span id="cart-count" class="absolute -top-1 -right-2 bg-amber-700 text-white text-[10px] font-bold w-4 h-4 rounded-full items-center justify-center border border-[#F9F9F7]" style="opacity:0; display:none"></span>
+                        <span id="cart-count"
+                            class="absolute -top-1 -right-2 bg-amber-700 text-white text-[10px] font-bold w-4 h-4 rounded-full items-center justify-center border border-[#F9F9F7]"
+                            style="opacity:0; display:none"></span>
                     </div>
                 </a>
 
-                <a href="login.html" class="flex items-center gap-2 bg-[#2C3E35] text-white px-5 py-2.5 rounded-lg border border-transparent hover:bg-amber-700 hover:shadow-md active:scale-95 smooth-transition">
+                <!-- Login -->
+                <a href="login.html"
+                    class="flex items-center gap-2 bg-[#2C3E35] text-white px-5 py-2.5 rounded-lg border border-transparent hover:bg-amber-700 hover:shadow-md active:scale-95 smooth-transition">
                     <span class="hidden sm:inline text-[15px] font-bold">Đăng nhập</span>
                     <i class="ph ph-user-circle text-[22px]"></i>
                 </a>
@@ -101,7 +118,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-1 w-full max-w-3xl mx-auto flex flex-col items-center px-6 py-16 md:py-24 text-center">
+    <main class="flex-1 w-full max-w-3xl mx-auto flex flex-col items-center px-6 pt-32 pb-16 md:pb-24 text-center">
         <div class="w-24 h-24 md:w-28 md:h-28 bg-[#E8F3EE] text-[#2C3E35] rounded-full flex items-center justify-center mb-6 md:mb-8 mx-auto shadow-sm">
             <i class="ph-fill ph-check-circle text-6xl md:text-7xl"></i>
         </div>
@@ -152,64 +169,75 @@
     <footer class="bg-[#1A1A1A] text-white pt-16 pb-6 mt-auto">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-12 mb-12 border-b border-white/10">
-                <div class="text-center md:text-left"><h3 class="text-lg font-bold mb-1">Bạn muốn nhận khuyến mãi đặc biệt?</h3><p class="text-sm opacity-50">Đăng ký ngay để nhận ưu đãi và tin tức mới nhất từ Lit Corner.</p></div>
-                <form class="flex w-full md:w-auto gap-2" onsubmit="event.preventDefault();"><input type="email" placeholder="Email của bạn..." class="bg-white/10 border border-white/20 rounded-full px-5 py-3 text-sm outline-none focus:border-amber-500 smooth-transition w-full md:w-72"><button class="bg-amber-700 hover:bg-amber-600 text-white px-6 py-3 rounded-full text-sm font-bold smooth-transition whitespace-nowrap hover:scale-105">Đăng ký</button></form>
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-1">Bạn muốn nhận khuyến mãi đặc biệt?</h3>
+                    <p class="text-sm opacity-50">Đăng ký ngay để nhận ưu đãi và tin tức mới nhất từ Lit Corner.</p>
+                </div>
+                <form class="flex w-full md:w-auto gap-2" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Email của bạn..." class="bg-white/10 border border-white/20 rounded-full px-5 py-3 text-sm outline-none focus:border-amber-500 smooth-transition w-full md:w-72">
+                    <button class="bg-amber-700 hover:bg-amber-600 text-white px-6 py-3 rounded-full text-sm font-bold smooth-transition whitespace-nowrap hover:scale-105">Đăng ký</button>
+                </form>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <div><h2 class="text-2xl font-extrabold mb-3 tracking-tight">Lit Corner</h2><p class="text-sm opacity-50 leading-relaxed mb-5">Nến thơm thủ công & phụ kiện tối giản cho không gian sống an yên.</p><div class="space-y-2 text-sm opacity-60"><p class="flex items-center gap-2"><i class="ph-bold ph-map-pin text-amber-500"></i> TP. Hồ Chí Minh, Việt Nam</p><p class="flex items-center gap-2"><i class="ph-bold ph-phone text-amber-500"></i> 0901 234 567</p><p class="flex items-center gap-2"><i class="ph-bold ph-envelope text-amber-500"></i> hello@litcorner.vn</p></div><div class="flex gap-3 mt-5"><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-facebook-logo"></i></a><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-instagram-logo"></i></a><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-tiktok-logo"></i></a><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-youtube-logo"></i></a></div></div>
-                <div><h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Sản Phẩm</h4><ul class="space-y-3 text-sm opacity-60"><li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Nến Thắp</a></li><li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Nến Decor</a></li><li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Phụ Kiện</a></li><li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Trà Ô Long</a></li><li><a href="gift.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Quà Tặng</a></li></ul></div>
-                <div><h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Thông Tin</h4><ul class="space-y-3 text-sm opacity-60"><li><a href="about.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Giới thiệu</a></li><li><a href="blog.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Blog</a></li><li><a href="policy.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách</a></li></ul></div>
-                <div><h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Hỗ Trợ</h4><ul class="space-y-3 text-sm opacity-60"><li><a href="policy.html#doi-tra" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách đổi trả</a></li><li><a href="policy.html#van-chuyen" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách vận chuyển</a></li><li><a href="policy.html#bao-mat" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách bảo mật</a></li><li><a href="policy.html#dieu-khoan" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Điều khoản sử dụng</a></li></ul><div class="mt-6"><p class="text-xs opacity-40 mb-3">Phương thức thanh toán</p><div class="flex gap-2 flex-wrap"><span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">VISA</span><span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">MasterCard</span><span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">Momo</span><span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">COD</span></div></div></div>
+                <div>
+                    <h2 class="text-2xl font-extrabold mb-3 tracking-tight">Lit Corner</h2>
+                    <p class="text-sm opacity-50 leading-relaxed mb-5">Nến thơm thủ công & phụ kiện tối giản cho không gian sống an yên.</p>
+                    <div class="space-y-2 text-sm opacity-60">
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-map-pin text-amber-500"></i> TP. Hồ Chí Minh, Việt Nam</p>
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-phone text-amber-500"></i> 0901 234 567</p>
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-envelope text-amber-500"></i> hello@litcorner.vn</p>
+                    </div>
+                    <div class="flex gap-3 mt-5">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-tiktok-logo"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-700 smooth-transition"><i class="ph-fill ph-youtube-logo"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Sản Phẩm</h4>
+                    <ul class="space-y-3 text-sm opacity-60">
+                        <li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Nến Thắp</a></li>
+                        <li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Nến Decor</a></li>
+                        <li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Phụ Kiện</a></li>
+                        <li><a href="shop.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Trà Ô Long</a></li>
+                        <li><a href="gift.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Quà Tặng</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Thông Tin</h4>
+                    <ul class="space-y-3 text-sm opacity-60">
+                        <li><a href="about.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Giới thiệu</a></li>
+                        <li><a href="blog.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Blog</a></li>
+                        <li><a href="policy.html" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-5 text-amber-500">Hỗ Trợ</h4>
+                    <ul class="space-y-3 text-sm opacity-60">
+                        <li><a href="policy.html#doi-tra" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách đổi trả</a></li>
+                        <li><a href="policy.html#van-chuyen" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách vận chuyển</a></li>
+                        <li><a href="policy.html#bao-mat" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Chính sách bảo mật</a></li>
+                        <li><a href="policy.html#dieu-khoan" class="hover:text-amber-500 hover:opacity-100 smooth-transition">Điều khoản sử dụng</a></li>
+                    </ul>
+                    <div class="mt-6">
+                        <p class="text-xs opacity-40 mb-3">Phương thức thanh toán</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">VISA</span>
+                            <span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">MasterCard</span>
+                            <span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">Momo</span>
+                            <span class="bg-white/10 px-3 py-1.5 rounded text-xs font-bold">COD</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-xs opacity-40">© 2026 Lit Corner. Mọi quyền được bảo lưu.</p><p class="text-xs opacity-40 flex items-center gap-1">Made with <i class="ph-fill ph-heart text-amber-500"></i> by Lit Corner Team</p></div>
+            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs opacity-40">© 2026 Lit Corner. Mọi quyền được bảo lưu.</p>
+                <p class="text-xs opacity-40 flex items-center gap-1">Made with <i class="ph-fill ph-heart text-amber-500"></i> by Lit Corner Team</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Read data from localStorage
-            const orderData = JSON.parse(localStorage.getItem('litcorner_last_order'));
-            
-            if (orderData) {
-                // Populate the UI with real data user just entered
-                document.getElementById('os-name').textContent = orderData.name;
-                document.getElementById('os-phone').textContent = orderData.phone;
-                
-                // Construct full address
-                let fullAddr = orderData.address;
-                if(orderData.district) fullAddr += `, ${orderData.district}`;
-                if(orderData.city) fullAddr += `, ${orderData.city}`;
-                document.getElementById('os-address').textContent = fullAddr;
-                
-                // Update total and ID
-                document.getElementById('os-total').textContent = orderData.total;
-                document.getElementById('os-id').textContent = '#' + orderData.orderId;
-                
-                // Update payment status dynamically
-                const methodEl = document.getElementById('os-method');
-                const statusEl = document.getElementById('os-payment-status');
-                
-                if(orderData.paymentMethod === 'ONLINE') {
-                    let methodText = 'Thanh toán trực tuyến';
-                    if(orderData.specificOnlineMethod === 'Momo') methodText = 'Ví điện tử MoMo';
-                    else if(orderData.specificOnlineMethod === 'ZaloPay') methodText = 'Ví điện tử ZaloPay';
-                    else if(orderData.specificOnlineMethod === 'VNPay') methodText = 'VNPAY-QR';
-                    else if(orderData.specificOnlineMethod === 'Card') methodText = 'Thẻ Tín Dụng / Ghi Nợ Quốc Tế';
-                    else if(orderData.specificOnlineMethod === 'Bank') methodText = 'Thẻ ATM / Internet Banking';
-
-                    methodEl.innerHTML = `Thanh toán trực tuyến <br><span class="text-[13px] opacity-70 font-medium">${methodText}</span>`;
-                    statusEl.textContent = 'ĐÃ THANH TOÁN';
-                    statusEl.className = 'text-[11px] bg-green-100 text-green-700 px-2.5 py-1 rounded-md font-bold w-fit mt-1 uppercase tracking-wider';
-                } else {
-                    methodEl.textContent = 'Thanh toán khi nhận hàng (COD)';
-                    statusEl.textContent = 'CHƯA THANH TOÁN';
-                    statusEl.className = 'text-[11px] bg-red-100 text-red-600 px-2.5 py-1 rounded-md font-bold w-fit mt-1 uppercase tracking-wider';
-                }
-            }
-            
-            // Cart was already cleared in checkout.html before redirect
-        });
-    </script>
     <!-- Floating Contact Actions -->
     <div class="fixed right-6 bottom-[124px] z-[100] flex flex-col gap-[26px]">
         <!-- Zalo -->
@@ -237,7 +265,6 @@
         </a>
     </div>
 
-    
     <!-- Zalo QR Modal -->
     <div id="zalo-qr-modal" class="fixed inset-0 z-[200] bg-[#E8F2FA] flex flex-col items-center justify-center opacity-0 pointer-events-none smooth-transition px-4 transition-all duration-300">
         <!-- Close button -->
@@ -246,92 +273,84 @@
         </button>
 
         <div class="flex flex-col items-center w-full max-w-[420px] relative z-[205] transition-transform duration-500 transform scale-95" id="zalo-qr-content">
-             <!-- Zalo Text Logo -->
-             <div class="text-[#0068FF] font-black text-[60px] tracking-tight mb-3 leading-none drop-shadow-sm">Zalo</div>
-             
-             <!-- Subtitles -->
-             <div class="text-center text-[#444444] text-[17px] mb-8 leading-snug font-medium">
+            <!-- Zalo Text Logo -->
+            <div class="text-[#0068FF] font-black text-[60px] tracking-tight mb-3 leading-none drop-shadow-sm">Zalo</div>
+
+            <!-- Subtitles -->
+            <div class="text-center text-[#444444] text-[17px] mb-8 leading-snug font-medium">
                 <p class="zalo-trans" data-vi="Đăng nhập tài khoản Zalo" data-en="Log in to Zalo account">Đăng nhập tài khoản Zalo</p>
                 <p class="zalo-trans" data-vi="để kết nối với ứng dụng zalo.me" data-en="to connect with zalo.me application">để kết nối với ứng dụng zalo.me</p>
-             </div>
+            </div>
 
-             <!-- Card -->
-             <div class="bg-white w-full rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col relative border border-white/50 min-h-[420px]">
-                 
-                 <!-- VIEW: QR CODE -->
-                 <div id="zalo-view-qr" class="w-full flex flex-col items-center pb-12 transition-all">
-                     <!-- Header -->
-                     <div class="w-full flex items-center justify-between px-6 py-4 border-b border-gray-100/80 bg-white/50">
-                         <span class="font-bold text-[#1a1a1a] text-[15px] zalo-trans" data-vi="Đăng nhập qua mã QR" data-en="Log in with QR code">Đăng nhập qua mã QR</span>
-                         <div class="relative">
-                             <button id="zalo-hamburger-btn" onclick="document.getElementById('zalo-dropdown').classList.toggle('opacity-0'); document.getElementById('zalo-dropdown').classList.toggle('pointer-events-none'); document.getElementById('zalo-dropdown').classList.toggle('scale-95');" class="w-8 h-8 flex items-center justify-center rounded border border-gray-200 text-gray-500 hover:text-black hover:bg-gray-50 smooth-transition shadow-sm bg-white focus:outline-none">
-                                 <i class="ph-bold ph-list text-lg pointer-events-none"></i>
-                             </button>
-                             <!-- Dropdown Menu -->
-                             <div id="zalo-dropdown" class="absolute top-[120%] right-0 bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.1)] rounded-lg py-2 px-1 w-max opacity-0 pointer-events-none transform scale-95 origin-top-right transition-all duration-200 z-[220]">
-                                 <button onclick="switchZaloView('pwd')" class="w-full text-left px-5 py-2.5 text-[14px] text-[#1a1a1a] hover:bg-gray-50 smooth-transition rounded-md zalo-trans" data-vi="Đăng nhập với mật khẩu" data-en="Log in with password">Đăng nhập với mật khẩu</button>
-                             </div>
-                         </div>
-                     </div>
-                     
-                     <!-- QR Code Box -->
-                     <div class="mt-10 border border-gray-100 rounded-2xl p-2 relative shadow-[0_2px_15px_rgba(0,0,0,0.03)] bg-white">
+            <!-- Card -->
+            <div class="bg-white w-full rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col relative border border-white/50 min-h-[420px]">
+                <!-- VIEW: QR CODE -->
+                <div id="zalo-view-qr" class="w-full flex flex-col items-center pb-12 transition-all">
+                    <!-- Header -->
+                    <div class="w-full flex items-center justify-between px-6 py-4 border-b border-gray-100/80 bg-white/50">
+                        <span class="font-bold text-[#1a1a1a] text-[15px] zalo-trans" data-vi="Đăng nhập qua mã QR" data-en="Log in with QR code">Đăng nhập qua mã QR</span>
+                        <div class="relative">
+                            <button id="zalo-hamburger-btn" onclick="document.getElementById('zalo-dropdown').classList.toggle('opacity-0'); document.getElementById('zalo-dropdown').classList.toggle('pointer-events-none'); document.getElementById('zalo-dropdown').classList.toggle('scale-95');" class="w-8 h-8 flex items-center justify-center rounded border border-gray-200 text-gray-500 hover:text-black hover:bg-gray-50 smooth-transition shadow-sm bg-white focus:outline-none">
+                                <i class="ph-bold ph-list text-lg pointer-events-none"></i>
+                            </button>
+                            <!-- Dropdown Menu -->
+                            <div id="zalo-dropdown" class="absolute top-[120%] right-0 bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.1)] rounded-lg py-2 px-1 w-max opacity-0 pointer-events-none transform scale-95 origin-top-right transition-all duration-200 z-[220]">
+                                <button onclick="switchZaloView('pwd')" class="w-full text-left px-5 py-2.5 text-[14px] text-[#1a1a1a] hover:bg-gray-50 smooth-transition rounded-md zalo-trans" data-vi="Đăng nhập với mật khẩu" data-en="Log in with password">Đăng nhập với mật khẩu</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- QR Code Box -->
+                    <div class="mt-10 border border-gray-100 rounded-2xl p-2 relative shadow-[0_2px_15px_rgba(0,0,0,0.03)] bg-white">
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://zalo.me/" class="w-[260px] h-[260px] p-2 mix-blend-multiply" alt="Zalo QR">
                         <div class="absolute top-1 left-1 w-6 h-6 border-t-[5px] border-l-[5px] border-[#0068FF] rounded-tl-[16px] pointer-events-none"></div>
                         <div class="absolute top-1 right-1 w-6 h-6 border-t-[5px] border-r-[5px] border-[#0068FF] rounded-tr-[16px] pointer-events-none"></div>
                         <div class="absolute bottom-1 left-1 w-6 h-6 border-b-[5px] border-l-[5px] border-[#0068FF] rounded-bl-[16px] pointer-events-none"></div>
                         <div class="absolute bottom-1 right-1 w-6 h-6 border-b-[5px] border-r-[5px] border-[#0068FF] rounded-br-[16px] pointer-events-none"></div>
-                     </div>
-                 </div>
-
-                 <!-- VIEW: PASSWORD -->
-                 <div id="zalo-view-pwd" class="w-full flex flex-col hidden transition-all h-full flex-1">
-                     <!-- Header -->
-                     <div class="w-full flex items-center justify-center px-6 py-4 border-b border-gray-100/80 bg-white/50">
-                         <span class="font-bold text-[#1a1a1a] text-[15px] zalo-trans" data-vi="Đăng nhập với mật khẩu" data-en="Log in with password">Đăng nhập với mật khẩu</span>
-                     </div>
-                     
-                     <!-- Form Body -->
-                     <div class="flex flex-col px-8 pt-8 pb-6 w-full flex-1">
-                         <!-- Input Phone -->
-                         <div class="flex items-center border-b border-gray-200 py-3 mb-4 transition-colors focus-within:border-[#0068FF]">
-                             <i class="ph-bold ph-device-mobile text-gray-500 text-xl mr-3"></i>
-                             <div class="flex items-center cursor-pointer mr-3 text-sm text-[#1a1a1a]">
-                                 <span>+84</span>
-                                 <i class="ph-fill ph-caret-down text-[10px] ml-1"></i>
-                             </div>
-                             <input type="tel" class="flex-1 outline-none text-[15px] placeholder-gray-400 text-[#1a1a1a] zalo-trans-ph" data-vi="Số điện thoại" data-en="Phone number" placeholder="Số điện thoại">
-                         </div>
-                         <!-- Input PWD -->
-                         <div class="flex items-center border-b border-gray-200 py-3 mb-8 transition-colors focus-within:border-[#0068FF]">
-                             <i class="ph-bold ph-lock-key text-gray-500 text-xl mr-4"></i>
-                             <input type="password" class="flex-1 outline-none text-[15px] placeholder-gray-400 text-[#1a1a1a] zalo-trans-ph" data-vi="Mật khẩu" data-en="Password" placeholder="Mật khẩu">
-                         </div>
-
-                         <!-- Login Btn -->
-                         <button class="w-full py-3.5 rounded bg-[#7DC2FA] hover:bg-[#0068FF] text-white font-medium text-[15px] mb-5 smooth-transition zalo-trans" data-vi="Đăng nhập với mật khẩu" data-en="Log in with password">Đăng nhập với mật khẩu</button>
-
-                         <!-- Forgot Password -->
-                         <div class="text-center mb-10 mt-2">
-                             <a href="#" class="text-[14px] text-gray-600 hover:text-black smooth-transition zalo-trans" data-vi="Quên mật khẩu?" data-en="Forgot password?">Quên mật khẩu?</a>
-                         </div>
-
-                         <!-- Switch back to QR -->
-                         <div class="text-center w-full mt-auto mb-2">
-                             <button onclick="switchZaloView('qr')" class="text-[#0068FF] font-bold text-[14px] hover:underline smooth-transition zalo-trans" data-vi="Đăng nhập qua mã QR" data-en="Log in with QR code">Đăng nhập qua mã QR</button>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-
-             <!-- Footer Language Toggle -->
-             <div class="mt-10 text-[14px] flex items-center justify-center gap-6" id="zalo-lang-toggle">
-                 <button class="zalo-lang-btn font-bold text-[#0068FF] transition-all duration-200" data-lang="vi">Tiếng Việt</button>
-                 <button class="zalo-lang-btn font-medium text-[#0068FF] opacity-70 hover:opacity-100 transition-all duration-200" data-lang="en">English</button>
-             </div>
+                    </div>
+                </div>
+                <!-- VIEW: PASSWORD -->
+                <div id="zalo-view-pwd" class="w-full flex flex-col hidden transition-all h-full flex-1">
+                    <!-- Header -->
+                    <div class="w-full flex items-center justify-center px-6 py-4 border-b border-gray-100/80 bg-white/50">
+                        <span class="font-bold text-[#1a1a1a] text-[15px] zalo-trans" data-vi="Đăng nhập với mật khẩu" data-en="Log in with password">Đăng nhập với mật khẩu</span>
+                    </div>
+                    <!-- Form Body -->
+                    <div class="flex flex-col px-8 pt-8 pb-6 w-full flex-1">
+                        <!-- Input Phone -->
+                        <div class="flex items-center border-b border-gray-200 py-3 mb-4 transition-colors focus-within:border-[#0068FF]">
+                            <i class="ph-bold ph-device-mobile text-gray-500 text-xl mr-3"></i>
+                            <div class="flex items-center cursor-pointer mr-3 text-sm text-[#1a1a1a]">
+                                <span>+84</span>
+                                <i class="ph-fill ph-caret-down text-[10px] ml-1"></i>
+                            </div>
+                            <input type="tel" class="flex-1 outline-none text-[15px] placeholder-gray-400 text-[#1a1a1a] zalo-trans-ph" data-vi="Số điện thoại" data-en="Phone number" placeholder="Số điện thoại">
+                        </div>
+                        <!-- Input PWD -->
+                        <div class="flex items-center border-b border-gray-200 py-3 mb-8 transition-colors focus-within:border-[#0068FF]">
+                            <i class="ph-bold ph-lock-key text-gray-500 text-xl mr-4"></i>
+                            <input type="password" class="flex-1 outline-none text-[15px] placeholder-gray-400 text-[#1a1a1a] zalo-trans-ph" data-vi="Mật khẩu" data-en="Password" placeholder="Mật khẩu">
+                        </div>
+                        <!-- Login Btn -->
+                        <button class="w-full py-3.5 rounded bg-[#7DC2FA] hover:bg-[#0068FF] text-white font-medium text-[15px] mb-5 smooth-transition zalo-trans" data-vi="Đăng nhập với mật khẩu" data-en="Log in with password">Đăng nhập với mật khẩu</button>
+                        <!-- Forgot Password -->
+                        <div class="text-center mb-10 mt-2">
+                            <a href="#" class="text-[14px] text-gray-600 hover:text-black smooth-transition zalo-trans" data-vi="Quên mật khẩu?" data-en="Forgot password?">Quên mật khẩu?</a>
+                        </div>
+                        <!-- Switch back to QR -->
+                        <div class="text-center w-full mt-auto mb-2">
+                            <button onclick="switchZaloView('qr')" class="text-[#0068FF] font-bold text-[14px] hover:underline smooth-transition zalo-trans" data-vi="Đăng nhập qua mã QR" data-en="Log in with QR code">Đăng nhập qua mã QR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Language Toggle -->
+            <div class="mt-10 text-[14px] flex items-center justify-center gap-6" id="zalo-lang-toggle">
+                <button class="zalo-lang-btn font-bold text-[#0068FF] transition-all duration-200" data-lang="vi">Tiếng Việt</button>
+                <button class="zalo-lang-btn font-medium text-[#0068FF] opacity-70 hover:opacity-100 transition-all duration-200" data-lang="en">English</button>
+            </div>
         </div>
     </div>
-    
+
     <style>
         #zalo-qr-modal:not(.opacity-0) #zalo-qr-content {
             transform: scale(1);
@@ -392,11 +411,52 @@
                 }
             }
         });
+        
+        // Script logic for Order Success
+        document.addEventListener('DOMContentLoaded', () => {
+            // Read data from localStorage
+            const orderData = JSON.parse(localStorage.getItem('litcorner_last_order'));
+            
+            if (orderData) {
+                // Populate the UI with real data user just entered
+                document.getElementById('os-name').textContent = orderData.name;
+                document.getElementById('os-phone').textContent = orderData.phone;
+                
+                // Construct full address
+                let fullAddr = orderData.address;
+                if(orderData.district) fullAddr += `, ${orderData.district}`;
+                if(orderData.city) fullAddr += `, ${orderData.city}`;
+                document.getElementById('os-address').textContent = fullAddr;
+                
+                // Update total and ID
+                document.getElementById('os-total').textContent = orderData.total;
+                document.getElementById('os-id').textContent = '#' + orderData.orderId;
+                
+                // Update payment status dynamically
+                const methodEl = document.getElementById('os-method');
+                const statusEl = document.getElementById('os-payment-status');
+                
+                if(orderData.paymentMethod === 'ONLINE') {
+                    let methodText = 'Thanh toán trực tuyến';
+                    if(orderData.specificOnlineMethod === 'Momo') methodText = 'Ví điện tử MoMo';
+                    else if(orderData.specificOnlineMethod === 'ZaloPay') methodText = 'Ví điện tử ZaloPay';
+                    else if(orderData.specificOnlineMethod === 'VNPay') methodText = 'VNPAY-QR';
+                    else if(orderData.specificOnlineMethod === 'Card') methodText = 'Thẻ Tín Dụng / Ghi Nợ Quốc Tế';
+                    else if(orderData.specificOnlineMethod === 'Bank') methodText = 'Thẻ ATM / Internet Banking';
+
+                    methodEl.innerHTML = `Thanh toán trực tuyến <br><span class="text-[13px] opacity-70 font-medium">${methodText}</span>`;
+                    statusEl.textContent = 'ĐÃ THANH TOÁN';
+                    statusEl.className = 'text-[11px] bg-green-100 text-green-700 px-2.5 py-1 rounded-md font-bold w-fit mt-1 uppercase tracking-wider';
+                } else {
+                    methodEl.textContent = 'Thanh toán khi nhận hàng (COD)';
+                    statusEl.textContent = 'CHƯA THANH TOÁN';
+                    statusEl.className = 'text-[11px] bg-red-100 text-red-600 px-2.5 py-1 rounded-md font-bold w-fit mt-1 uppercase tracking-wider';
+                }
+            }
+        });
     </script>
 
-    
     <script src="main.js"></script>
 </body>
 </html>
-
 

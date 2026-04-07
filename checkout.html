@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi" class="scroll-smooth">
 
 <head>
@@ -30,42 +30,48 @@
         </button>
     </div>
 
-<nav class="sticky top-0 w-full bg-[#F9F9F7]/95 dark:bg-[#1A1A1A]/95 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700 smooth-transition" id="navbar">
+               <nav class="sticky top-0 w-full bg-[#F9F9F7]/95 dark:bg-[#1A1A1A]/95 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700 smooth-transition" id="navbar">
         <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-4">
             <!-- LEFT: Logo + Links -->
             <div class="flex items-center gap-8 xl:gap-12">
-                <a href="index.html" class="w-24 shrink-0 hover:opacity-70 smooth-transition">
-                    <img src="Assets/Image/logo.webp" alt="Lit Corner Logo" class="w-full object-contain mix-blend-multiply">
+                <a href="index.html"
+                    class="w-24 shrink-0 hover:scale-[0.97] active:scale-95 smooth-transition mix-blend-multiply origin-left">
+                    <img src="Assets/Image/logo.webp" alt="Lit Corner Logo" class="w-full object-contain block">
                 </a>
 
-                <div class="hidden lg:flex items-center gap-4 xl:gap-6 text-[15px] font-bold text-[#1A1A1A]/90 dark:text-white/60 whitespace-nowrap">
-                                        <!-- Products Dropdown -->
+                <div
+                    class="hidden lg:flex items-center gap-4 xl:gap-6 text-[15px] font-bold text-[#1A1A1A]/90 dark:text-white/60 whitespace-nowrap">
+                    <!-- Products Dropdown -->
                     <div class="relative group h-full flex items-center">
                         <a href="shop.html"
                             class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition cursor-pointer py-2">
                             <i class="ph-fill ph-storefront text-lg"></i> Sản phẩm
                             <i class="ph-bold ph-caret-down text-[10px] opacity-70 ml-0.5 transform group-hover:rotate-180 transition-transform"></i>
                         </a>
-                        
                         <!-- Dropdown Menu -->
                         <div class="absolute top-10 left-0 bg-white border border-gray-100 shadow-[0_15px_40px_rgba(0,0,0,0.06)] rounded-xl py-3 min-w-[240px] opacity-0 pointer-events-none translate-y-3 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 z-[100] before:content-[''] before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
                             <a href="shop.html" class="block px-6 py-2.5 text-[15px] font-bold text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Tất cả sản phẩm</a>
                             <div class="w-full h-px bg-gray-100 my-1"></div>
-                            <a href="shop.html?filter=nen-thap" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Nến thơm thủ công</a>
-                            <a href="shop.html?filter=nen-decor" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Sáp thơm trang trí</a>
-                            <a href="shop.html?filter=phu-kien" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Phụ kiện nến</a>
+                            <a href="shop.html?filter=nen-thap" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Nến Thắp &amp; Thư giãn</a>
+                            <a href="shop.html?filter=nen-decor" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Nến Trang Trí</a>
+                            <a href="shop.html?filter=phu-kien" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Phụ Kiện Trang Trí</a>
+                            <a href="shop.html?filter=tra" class="block px-6 py-2.5 text-[15px] font-medium text-[#444444] hover:text-amber-700 hover:bg-amber-50/50 transition-colors">Trà Thanh Lọc</a>
                         </div>
                     </div>
-                    <a href="gift.html" class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
+                    <a href="gift.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
                         <i class="ph-fill ph-gift text-lg"></i> Quà tặng
                     </a>
-                    <a href="about.html" class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
+                    <a href="about.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
                         <i class="ph-fill ph-info text-lg"></i> Câu chuyện
                     </a>
-                    <a href="blog.html" class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
+                    <a href="blog.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
                         <i class="ph-fill ph-book-open-text text-lg"></i> Cảm hứng
                     </a>
-                    <a href="orders.html" class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
+                    <a href="orders.html"
+                        class="flex items-center gap-1.5 text-[#1A1A1A] dark:text-white/60 hover:text-amber-700 dark:hover:text-amber-400 hover:-translate-y-0.5 smooth-transition">
                         <i class="ph-fill ph-receipt text-lg"></i> Đơn mua
                     </a>
                 </div>
@@ -73,21 +79,33 @@
 
             <!-- RIGHT: Search, Cart, Login -->
             <div class="flex items-center gap-4 xl:gap-6 shrink-0">
+                <!-- Search Bar (~15% width) -->
                 <div class="hidden md:flex relative w-48 xl:w-64">
-                    <input type="text" placeholder="Tìm kiếm..." class="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm outline-none text-[#1A1A1A] placeholder-gray-400 focus:border-amber-700 focus:ring-1 focus:ring-amber-700 smooth-transition shadow-sm">
-                    <i class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
+                    <input type="text" placeholder="Tìm kiếm..."
+                        class="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm outline-none text-[#1A1A1A] placeholder-gray-400 focus:border-amber-700 focus:ring-1 focus:ring-amber-700 smooth-transition shadow-sm">
+                    <i
+                        class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
                 </div>
-                <button class="md:hidden text-[#1A1A1A] hover:text-amber-700 smooth-transition"><i class="ph-bold ph-magnifying-glass text-2xl"></i></button>
 
-                <a href="cart.html" id="cart-btn" class="flex items-center gap-2 text-[#1A1A1A] hover:text-amber-700 smooth-transition group">
+                <button class="md:hidden text-[#1A1A1A] hover:text-amber-700 smooth-transition">
+                    <i class="ph-bold ph-magnifying-glass text-2xl"></i>
+                </button>
+
+                <!-- Cart -->
+                <a href="cart.html" id="cart-btn"
+                    class="flex items-center gap-2 text-[#1A1A1A] hover:text-amber-700 smooth-transition group">
                     <span class="hidden sm:inline text-[15px] font-bold">Giỏ hàng</span>
                     <div class="relative">
                         <i class="ph ph-shopping-cart text-[28px]"></i>
-                        <span id="cart-count" class="absolute -top-1 -right-2 bg-amber-700 text-white text-[10px] font-bold w-4 h-4 rounded-full items-center justify-center border border-[#F9F9F7]" style="opacity:0; display:none"></span>
+                        <span id="cart-count"
+                            class="absolute -top-1 -right-2 bg-amber-700 text-white text-[10px] font-bold w-4 h-4 rounded-full items-center justify-center border border-[#F9F9F7]"
+                            style="opacity:0; display:none"></span>
                     </div>
                 </a>
 
-                <a href="login.html" class="flex items-center gap-2 bg-[#2C3E35] text-white px-5 py-2.5 rounded-lg border border-transparent hover:bg-amber-700 hover:shadow-md active:scale-95 smooth-transition">
+                <!-- Login -->
+                <a href="login.html"
+                    class="flex items-center gap-2 bg-[#2C3E35] text-white px-5 py-2.5 rounded-lg border border-transparent hover:bg-amber-700 hover:shadow-md active:scale-95 smooth-transition">
                     <span class="hidden sm:inline text-[15px] font-bold">Đăng nhập</span>
                     <i class="ph ph-user-circle text-[22px]"></i>
                 </a>
@@ -96,7 +114,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-1 w-full max-w-[1200px] mx-auto px-6 py-12 md:py-20">
+    <main class="flex-1 w-full max-w-[1200px] mx-auto px-6 pt-32 pb-20">
         <!-- Breadcrumbs -->
         <div class="flex items-center gap-2 text-sm opacity-50 mb-8 font-semibold">
             <a href="cart.html" class="hover:underline flex items-center gap-1"><i class="ph-bold ph-shopping-cart"></i> Giỏ hàng</a>
@@ -663,5 +681,7 @@
     <script src="main.js"></script>
 </body>
 </html>
+
+
 
 

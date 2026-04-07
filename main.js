@@ -341,6 +341,103 @@ const productData = [
     }
 ];
 
+// --- BLOG DATABASE (Dữ liệu bài viết) ---
+const blogData = [
+    {
+        id: 'khong-gian-thu-gian',
+        title: 'Cách 30 Phút Tạo Nên Không Gian Thư Giãn Tuyệt Đối',
+        excerpt: 'Trong một thế giới luôn hối hả, chỉ cần 30 phút và một ngọn nến thơm là bạn có thể thiết lập lại tâm trí và tạo ra góc tĩnh lặng riêng mình.',
+        image: 'Assets/Image/blog_relax_v2.png',
+        category: 'loi-song',
+        categoryLabel: 'Lối Sống',
+        date: 'Tháng 11, 2024',
+        readTime: '5 phút đọc',
+        author: 'Lit Corner Team',
+        content: `
+            <p>Trong một thế giới luôn hối hả và chuyển động không ngừng, việc tìm kiếm một góc nhỏ bình yên trong chính ngôi nhà của mình là điều thiết yếu. Không cần những nghi thức rườm rà, đôi khi chỉ một ngọn nến thơm cũng đủ để thiết lập lại tâm trí.</p>
+            <h2>1. Liệu pháp "30 Phút Chuyển Giao"</h2>
+            <p>Sau khi kết thúc công việc, não bộ chúng ta thường vẫn trong trạng thái gồng mình và căng thẳng. Một thói quen "chuyển giao" đơn giản có thể báo hiệu cho cơ thể biết rằng: <em>"Đã đến lúc được nghỉ ngơi"</em>.</p>
+            <p>Hãy thử tắt bớt đèn tuýp sáng chói, thắp lên một hũ nến sáp ong tự nhiên của Lit Corner, và để ánh lửa bập bùng thay thế sự xao nhãng của màn hình điện thoại.</p>
+            <h2>2. Bí quyết kết hợp Tầm nhìn và Khứu giác</h2>
+            <p>Theo tâm lý học không gian, sự kết hợp giữa ánh sáng yếu (ambient light) và một mùi hương mộc mạc sẽ nhanh chóng làm dịu lại hệ thần kinh trung ương.</p>
+            <blockquote>"Nến thủ công không chỉ để ngửi. Nó là một điểm mỏ neo thị giác, giúp bạn neo đậu lại với những phút giây hiện tại."</blockquote>
+            <h2>3. Thiết lập góc mộc mạc cá nhân</h2>
+            <p>Đặt nến trên một chiếc khay xi măng thủ công để đảm bảo an toàn và thẩm mỹ. Thưởng thức cùng một ly Trà Ô Long Sữa nóng và một bản nhạc Lofi nhẹ nhàng.</p>
+        `
+    },
+    {
+        id: 'cach-chon-nen-thom',
+        title: 'Hướng Dẫn Chọn Nến Thơm Phù Hợp Với Từng Không Gian',
+        excerpt: 'Mỗi căn phòng có một "tính cách" riêng – phòng ngủ cần sự tĩnh lặng, phòng làm việc cần sự tập trung. Cùng khám phá cách chọn hương nến hoàn hảo.',
+        image: 'Assets/Image/blog_choose.png',
+        category: 'huong-dan',
+        categoryLabel: 'Hướng Dẫn',
+        date: 'Tháng 12, 2024',
+        readTime: '4 phút đọc',
+        author: 'Nguyễn Minh Châu',
+        content: `
+            <p>Không phải ngẫu nhiên mà các khách sạn 5 sao luôn có mùi hương đặc trưng riêng – đó là nghệ thuật thiết kế mùi hương cho không gian. Bạn cũng có thể làm điều tương tự tại nhà.</p>
+            <h2>1. Phòng Ngủ – Hương Thư Giãn</h2>
+            <p>Phòng ngủ là nơi cần sự bình yên tuyệt đối. Hãy chọn những dòng hương nhẹ nhàng như Lavender (oải hương), Vanilla hoặc Chamomile. Tránh các hương có tính kích thích mạnh.</p>
+            <h2>2. Phòng Làm Việc – Hương Kích Thích Tư Duy</h2>
+            <p>Đây là không gian cần sự tập trung. Hương Bạc Hà (Mint) và Chanh sả sẽ giúp kích thích não bộ hoạt động hiệu quả hơn, là lựa chọn lý tưởng cho "Bộ Nến Thời Gian" của chúng tôi.</p>
+            <h2>3. Phòng Khách – Hương Chào Đón</h2>
+            <p>Gây ấn tượng tốt với khách bằng những hương ấm áp như Gỗ Đàn Hương (Sandalwood) hoặc Quế Hoa Cam. Đây là những hương mang lại cảm giác sang trọng và hiếu khách.</p>
+            <blockquote>"Mùi hương là thứ duy nhất có thể chạm đến ký ức và cảm xúc của chúng ta ngay lập tức, không qua bộ lọc của lý trí."</blockquote>
+        `
+    },
+    {
+        id: 'an-toan-khi-dung-nen',
+        title: '7 Lưu Ý An Toàn Khi Thắp Nến Bạn Nhất Định Phải Biết',
+        excerpt: 'Nến thơm mang lại vẻ đẹp và sự thư giãn, nhưng nếu sử dụng không đúng cách có thể gây nguy hiểm. Hãy xem 7 nguyên tắc vàng giúp bạn thưởng nến an toàn.',
+        image: 'Assets/Image/blog_safety.png',
+        category: 'kien-thuc',
+        categoryLabel: 'Kiến Thức',
+        date: 'Tháng 1, 2025',
+        readTime: '3 phút đọc',
+        author: 'Lit Corner Team',
+        content: `
+            <p>An toàn luôn là ưu tiên hàng đầu khi thưởng thức nến. Dù sản phẩm của chúng tôi được làm từ sáp thiên nhiên an toàn, dưới đây là 7 nguyên tắc vàng bạn cần ghi nhớ.</p>
+            <h2>7 Nguyên Tắc Vàng</h2>
+            <ul>
+                <li><strong>Không bao giờ để nến đang cháy khi không có người:</strong> Đây là nguyên tắc số 1 và quan trọng nhất.</li>
+                <li><strong>Cắt bấc trước mỗi lần thắp:</strong> Nên cắt xuống còn khoảng 5mm để ngọn lửa ổn định và không tạo khói đen.</li>
+                <li><strong>Tránh xa gió lùa:</strong> Đặt nến ở nơi tránh xa quạt, điều hòa để ánh lửa không bị rung lắc gây khói.</li>
+                <li><strong>Dùng đế nến phù hợp:</strong> Luôn đặt nến trên bề mặt phẳng, cứng và chịu nhiệt.</li>
+                <li><strong>Không đốt quá 4 tiếng liên tục:</strong> Sau 4 giờ, hãy tắt nến và để nguội ít nhất 2 giờ trước khi thắp lại.</li>
+                <li><strong>Giữ xa tầm tay trẻ em và thú cưng:</strong> Đảm bảo nến được đặt ở nơi an toàn.</li>
+                <li><strong>Tắt nến đúng cách:</strong> Dùng nắp đậy hoặc que dập lửa chuyên dụng, tránh thổi bằng miệng sẽ gây khói và bắn sáp.</li>
+            </ul>
+            <blockquote>"Một ngọn nến được thắp đúng cách có thể mang đến hàng trăm giờ thưởng thức an toàn và thú vị."</blockquote>
+        `
+    },
+    {
+        id: 'loi-ich-sap-dau-nanh',
+        title: 'Tại Sao Sáp Đậu Nành Là Lựa Chọn Tốt Hơn Sáp Paraffin?',
+        excerpt: 'Hiểu rõ sự khác biệt giữa sáp đậu nành tự nhiên và sáp paraffin tổng hợp để lựa chọn nến thơm thực sự tốt cho sức khỏe và môi trường.',
+        image: 'Assets/Image/blog_soy_wax.png',
+        category: 'kien-thuc',
+        categoryLabel: 'Kiến Thức',
+        date: 'Tháng 2, 2025',
+        readTime: '6 phút đọc',
+        author: 'Nguyễn Minh Châu',
+        content: `
+            <p>Khi mua nến thơm, nhiều người chỉ quan tâm đến mùi hương mà bỏ qua một yếu tố quan trọng không kém: chất liệu sáp. Sự khác biệt giữa sáp đậu nành và sáp paraffin là đáng kể.</p>
+            <h2>Sáp Paraffin – Những Điều Bạn Chưa Biết</h2>
+            <p>Sáp paraffin là sản phẩm phụ của quá trình lọc dầu mỏ. Khi đốt cháy, nó có thể thải ra các chất như benzene và toluene – những chất có hại cho đường hô hấp nếu tiếp xúc lâu dài trong phòng kín.</p>
+            <h2>Sáp Đậu Nành – Lựa Chọn Tự Nhiên</h2>
+            <p>Sáp đậu nành (Soy Wax) được chiết xuất từ đậu tương, là nguồn nguyên liệu hoàn toàn tái tạo và thân thiện với môi trường. Khi cháy, nó tạo ra ít khói hơn đáng kể và không chứa độc tố.</p>
+            <ul>
+                <li><strong>Cháy lâu hơn:</strong> Sáp đậu nành cháy chậm hơn 30-50% so với paraffin.</li>
+                <li><strong>Lưu hương tốt hơn:</strong> Nhiệt độ cháy thấp hơn giúp tinh dầu tỏa hương từ từ và bền lâu.</li>
+                <li><strong>Dễ vệ sinh:</strong> Nếu sáp bị đổ, chỉ cần dùng nước nóng và xà phòng là sạch.</li>
+                <li><strong>Thân thiện môi trường:</strong> Phân hủy sinh học tự nhiên.</li>
+            </ul>
+            <p>Tại Lit Corner, 100% sản phẩm nến của chúng tôi đều sử dụng sáp đậu nành hoặc sáp ong nguyên chất, không pha trộn paraffin.</p>
+        `
+    }
+];
+
 document.addEventListener('DOMContentLoaded', () => {
     // --- DARK MODE THEME TOGGLE ---
     const themeToggleBtn = document.getElementById('theme-toggle');
@@ -500,6 +597,113 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const desktopSearchInputs = document.querySelectorAll('nav input[placeholder="Tìm kiếm..."]');
+    desktopSearchInputs.forEach(input => {
+        const container = input.closest('div');
+        if (!container) return;
+
+        // Create dropdown container
+        const dropdown = document.createElement('div');
+        dropdown.className = 'absolute top-full left-0 mt-2 w-[320px] bg-white dark:bg-[#2A2A2A] border border-gray-100 dark:border-gray-700 shadow-xl rounded-xl max-h-[350px] overflow-y-auto z-[150] opacity-0 pointer-events-none transition-all duration-200 translate-y-2';
+        container.appendChild(dropdown);
+
+        // Input event for instant search
+        input.addEventListener('input', (e) => {
+            const query = e.target.value.trim().toLowerCase();
+            if (!query) {
+                dropdown.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+                dropdown.innerHTML = '';
+                return;
+            }
+
+            // Search by product name
+            const productMatches = productData.filter(p => p.name.toLowerCase().includes(query));
+            const blogMatches = blogData.filter(b => b.title.toLowerCase().includes(query) || b.excerpt.toLowerCase().includes(query) || b.categoryLabel.toLowerCase().includes(query));
+            
+            if (productMatches.length > 0 || blogMatches.length > 0) {
+                let html = '';
+
+                if (productMatches.length > 0) {
+                    html += `<p class="px-3 pt-2.5 pb-1 text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">Sản phẩm</p>`;
+                    html += productMatches.slice(0, 3).map(p => `
+                        <a href="product-detail.html?id=${p.id}" class="flex items-center gap-3 p-3 border-b border-gray-50 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-gray-800 smooth-transition last:border-0 group">
+                            <div class="w-12 h-12 bg-[#F9F9F7] rounded flex items-center justify-center flex-shrink-0">
+                                <img src="${p.image}" class="max-w-full max-h-full object-contain mix-blend-multiply">
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="text-[13px] font-bold text-[#1a1a1a] dark:text-white truncate group-hover:text-amber-700 smooth-transition">${p.name}</p>
+                                <p class="text-[11px] font-semibold text-amber-700">${p.price}</p>
+                            </div>
+                        </a>
+                    `).join('');
+                }
+
+                if (blogMatches.length > 0) {
+                    html += `<p class="px-3 pt-2.5 pb-1 text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 border-t border-gray-100 dark:border-gray-700">Bài viết</p>`;
+                    html += blogMatches.slice(0, 2).map(b => `
+                        <a href="blog-detail.html?id=${b.id}" class="flex items-center gap-3 p-3 border-b border-gray-50 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-gray-800 smooth-transition last:border-0 group">
+                            <div class="w-12 h-12 bg-amber-50 rounded flex items-center justify-center flex-shrink-0 overflow-hidden">
+                                <img src="${b.image}" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'ph-fill ph-article text-2xl text-amber-500\'></i>'">
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="text-[13px] font-bold text-[#1a1a1a] dark:text-white truncate group-hover:text-amber-700 smooth-transition">${b.title}</p>
+                                <p class="text-[11px] text-gray-400">${b.categoryLabel} · ${b.readTime}</p>
+                            </div>
+                        </a>
+                    `).join('');
+                }
+
+                html += `
+                    <a href="shop.html?q=${encodeURIComponent(query)}" class="block p-3 text-center text-[13px] font-bold text-[#0068FF] bg-gray-50/50 hover:bg-gray-100 dark:bg-gray-800/50 dark:hover:bg-gray-800 smooth-transition border-t border-gray-100 dark:border-gray-700">
+                        Xem tất cả kết quả cho "${e.target.value.trim()}"
+                    </a>
+                `;
+                dropdown.innerHTML = html;
+            } else {
+                dropdown.innerHTML = `<div class="p-5 text-center text-[13px] text-gray-500 font-medium">Không tìm thấy kết quả.</div>`;
+            }
+
+            dropdown.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+        });
+
+        // Hide dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!container.contains(e.target)) {
+                dropdown.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+            }
+        });
+        
+        // Show dropdown again when focusing if it has value
+        input.addEventListener('focus', () => {
+            if (input.value.trim()) {
+                dropdown.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+            }
+        });
+
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const query = input.value.trim();
+                if (query) {
+                    window.location.href = `shop.html?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+        
+        // Make the magnifying glass icon clickable on desktop
+        const icon = container.querySelector('.ph-magnifying-glass');
+        if (icon) {
+            icon.style.cursor = 'pointer';
+            icon.addEventListener('click', () => {
+                const query = input.value.trim();
+                if (query) {
+                    window.location.href = `shop.html?q=${encodeURIComponent(query)}`;
+                } else {
+                    openSearch(); // Open full overlay if empty
+                }
+            });
+        }
+    });
+
     if(closeBtn) closeBtn.addEventListener('click', closeSearch);
     
     if(searchInput) searchInput.addEventListener('keypress', (e) => {
@@ -512,7 +716,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addToCart = function(event, id = null) {
         if (event) event.stopPropagation();
         
-        const productId = id || 'ly-nen'; 
+        // Try to get id from button data attribute if not passed
+        let productId = id;
+        if (!productId && event && event.currentTarget) {
+            productId = event.currentTarget.getAttribute('data-product-id');
+        }
+        if (!productId) return; // No id found, do nothing
+        
         const product = productData.find(p => p.id === productId);
         
         if (product) {
@@ -583,8 +793,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterBtns.length > 0) {
         const urlParams = new URLSearchParams(window.location.search);
         const searchQuery = urlParams.get('q') || '';
-        let currentFilter = 'all';
+        const urlFilter = urlParams.get('filter') || 'all';
+        let currentFilter = urlFilter;
         let currentSort = 'new';
+
+        // Activate the matching sidebar button
+        filterBtns.forEach(btn => {
+            if (btn.getAttribute('data-filter') === currentFilter) {
+                filterBtns.forEach(b => b.classList.remove('active', 'bg-[#2C3E35]', 'text-white', 'border-[#2C3E35]'));
+                btn.classList.add('bg-[#2C3E35]', 'text-white', 'border-[#2C3E35]');
+            }
+        });
 
         renderShopProducts(currentFilter, currentSort, searchQuery);
 

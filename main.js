@@ -461,6 +461,95 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- MOBILE HAMBURGER MENU ---
+    (function initMobileMenu() {
+        // Only create mobile menu if hamburger button exists
+        const hamburgerBtn = document.getElementById('mobile-menu-btn');
+        if (!hamburgerBtn) return;
+
+        // Create overlay
+        const overlay = document.createElement('div');
+        overlay.id = 'mobile-menu-overlay';
+        document.body.appendChild(overlay);
+
+        // Create drawer
+        const drawer = document.createElement('div');
+        drawer.id = 'mobile-menu-drawer';
+
+        // Detect current page for active state
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+        function linkClass(page) {
+            return currentPage === page ? 'mobile-nav-link active-link' : 'mobile-nav-link';
+        }
+
+        drawer.innerHTML = `
+            <div style="padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.08);">
+                <a href="index.html" style="display: block; width: 80px;">
+                    <img src="Assets/Image/logo.webp" alt="Lit Corner" style="width: 100%; object-fit: contain;">
+                </a>
+                <button id="mobile-menu-close" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; font-size: 18px; color: #666;">
+                    <i class="ph-bold ph-x"></i>
+                </button>
+            </div>
+            <nav style="padding: 8px 0;">
+                <a href="shop.html" class="${linkClass('shop.html')}">
+                    <i class="ph-fill ph-storefront"></i> Sản phẩm
+                </a>
+                <a href="gift.html" class="${linkClass('gift.html')}">
+                    <i class="ph-fill ph-gift"></i> Quà tặng
+                </a>
+                <a href="about.html" class="${linkClass('about.html')}">
+                    <i class="ph-fill ph-info"></i> Câu chuyện
+                </a>
+                <a href="blog.html" class="${linkClass('blog.html')}">
+                    <i class="ph-fill ph-book-open-text"></i> Cảm hứng
+                </a>
+                <a href="orders.html" class="${linkClass('orders.html')}">
+                    <i class="ph-fill ph-receipt"></i> Đơn mua
+                </a>
+            </nav>
+            <div style="padding: 16px 24px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; opacity: 0.4; margin-bottom: 12px;">Danh mục sản phẩm</p>
+                <a href="shop.html?filter=nen-thap" class="mobile-nav-link" style="padding: 10px 24px; font-size: 13px; opacity: 0.7;">
+                    Nến Thắp & Thư giãn
+                </a>
+                <a href="shop.html?filter=nen-decor" class="mobile-nav-link" style="padding: 10px 24px; font-size: 13px; opacity: 0.7;">
+                    Nến Trang Trí
+                </a>
+                <a href="shop.html?filter=phu-kien" class="mobile-nav-link" style="padding: 10px 24px; font-size: 13px; opacity: 0.7;">
+                    Phụ Kiện Trang Trí
+                </a>
+                <a href="shop.html?filter=tra" class="mobile-nav-link" style="padding: 10px 24px; font-size: 13px; opacity: 0.7;">
+                    Trà Thanh Lọc
+                </a>
+            </div>
+            <div style="padding: 16px 24px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <a href="login.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: #2C3E35; color: white; padding: 12px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; text-decoration: none; transition: background 0.3s;">
+                    <i class="ph ph-user-circle" style="font-size: 20px;"></i> Đăng nhập
+                </a>
+            </div>
+        `;
+        document.body.appendChild(drawer);
+
+        function openMenu() {
+            overlay.classList.add('active');
+            drawer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            overlay.classList.remove('active');
+            drawer.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        hamburgerBtn.addEventListener('click', openMenu);
+        overlay.addEventListener('click', closeMenu);
+        const closeBtn = document.getElementById('mobile-menu-close');
+        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    })();
+
     // 1. Khởi tạo Giỏ hàng (Cart Init)
     let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
     

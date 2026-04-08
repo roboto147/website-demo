@@ -24,7 +24,7 @@
 
 <body class="bg-[#F9F9F7] text-[#1A1A1A] dark:bg-[#1A1A1A] dark:text-[#F9F9F7] smooth-transition">
     <!-- Floating Dark Mode Toggle -->
-    <div class="fixed left-6 top-1/2 -translate-y-1/2 z-[200]">
+    <div class="floating-theme-toggle fixed left-6 top-1/2 -translate-y-1/2 z-[200]">
         <button id="theme-toggle" class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-xl rounded-full w-12 h-12 flex items-center justify-center hover:scale-110 active:scale-95 smooth-transition group">
             <div class="text-[#1A1A1A] dark:text-amber-400 group-hover:text-amber-700 dark:group-hover:text-amber-300 smooth-transition">
                 <i id="theme-icon-light" class="ph-fill ph-sun text-2xl block dark:hidden"></i>
@@ -85,7 +85,12 @@
                 </div>
             </div>
 
-            <!-- RIGHT: Search, Cart, Login -->
+            <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 smooth-transition" aria-label="Menu">
+                    <i class="ph-bold ph-list text-2xl text-[#1A1A1A] dark:text-white"></i>
+                </button>
+
+                <!-- RIGHT: Search, Cart, Login -->
             <div class="flex items-center gap-4 xl:gap-6 shrink-0">
                 <!-- Search Bar (~15% width) -->
                 <div class="hidden md:flex relative w-48 xl:w-64">
@@ -305,7 +310,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Floating Contact Actions -->
-    <div class="fixed right-6 bottom-[124px] z-[100] flex flex-col gap-[26px]">
+    <div class="floating-contact-actions fixed right-6 bottom-[124px] z-[100] flex flex-col gap-[26px]">
         <!-- Zalo -->
         <button onclick="document.getElementById('zalo-qr-modal').classList.remove('opacity-0', 'pointer-events-none')" class="contact-btn group border-0 outline-none focus:outline-none cursor-pointer relative">
             <div class="ripple bg-[#0068FF] group-hover:!opacity-0" style="border-radius: 40% !important;"></div>

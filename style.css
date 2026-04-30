@@ -618,6 +618,19 @@ html.dark .product-image-hover {
     mix-blend-mode: normal !important;
 }
 
+html.dark nav a.mix-blend-multiply {
+    mix-blend-mode: screen !important;
+}
+
+html.dark nav a.mix-blend-multiply img[src*="logo.webp"],
+html.dark #mobile-menu-drawer img[src*="logo.webp"] {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html.dark #mobile-menu-drawer a:has(img[src*="logo.webp"]) {
+    mix-blend-mode: screen;
+} /* If :has fails here it's fine, drawer doesn't use mix-blend-multiply */
+
 html.dark .product-image-container {
     background-color: #f0f0f0 !important;
 }

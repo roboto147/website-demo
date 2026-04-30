@@ -552,11 +552,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Khởi tạo Giỏ hàng (Cart Init)
     let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
-    
+
     function updateCartCount() {
         const count = cart.reduce((sum, item) => sum + item.qty, 0);
         const countEl = document.getElementById('cart-count');
-        if(countEl) {
+        if (countEl) {
             if (count > 0) {
                 countEl.innerText = count;
                 countEl.style.display = 'flex';
@@ -708,7 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Search by product name
             const productMatches = productData.filter(p => p.name.toLowerCase().includes(query));
             const blogMatches = blogData.filter(b => b.title.toLowerCase().includes(query) || b.excerpt.toLowerCase().includes(query) || b.categoryLabel.toLowerCase().includes(query));
-            
+
             if (productMatches.length > 0 || blogMatches.length > 0) {
                 let html = '';
 
@@ -761,7 +761,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 dropdown.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
             }
         });
-        
+
         // Show dropdown again when focusing if it has value
         input.addEventListener('focus', () => {
             if (input.value.trim()) {
@@ -777,7 +777,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-        
+
         // Make the magnifying glass icon clickable on desktop
         const icon = container.querySelector('.ph-magnifying-glass');
         if (icon) {
@@ -793,27 +793,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    if(closeBtn) closeBtn.addEventListener('click', closeSearch);
-    
-    if(searchInput) searchInput.addEventListener('keypress', (e) => {
+    if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+
+    if (searchInput) searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') executeSearch();
     });
-    
-    if(submitBtn) submitBtn.addEventListener('click', executeSearch);
+
+    if (submitBtn) submitBtn.addEventListener('click', executeSearch);
 
     // --- CART ACTIONS ---
-    window.addToCart = function(event, id = null) {
+    window.addToCart = function (event, id = null) {
         if (event) event.stopPropagation();
-        
+
         // Try to get id from button data attribute if not passed
         let productId = id;
         if (!productId && event && event.currentTarget) {
             productId = event.currentTarget.getAttribute('data-product-id');
         }
         if (!productId) return; // No id found, do nothing
-        
+
         const product = productData.find(p => p.id === productId);
-        
+
         if (product) {
             const existing = cart.find(item => item.id === productId);
             if (existing) existing.qty += 1;
@@ -822,7 +822,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const btn = document.getElementById('cart-btn');
-        if(btn) {
+        if (btn) {
             btn.classList.add('scale-110', 'bg-amber-700');
             setTimeout(() => btn.classList.remove('scale-110', 'bg-amber-700'), 200);
         }
@@ -836,9 +836,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const countEl = document.getElementById('product-count');
     const emptyState = document.getElementById('empty-state');
 
-    window.renderShopProducts = function(filter = 'all', sortBy = 'new', query = '') {
+    window.renderShopProducts = function (filter = 'all', sortBy = 'new', query = '') {
         if (!productGrid) return;
-        
+
         let filtered = [...productData];
 
         if (filter !== 'all') {
@@ -914,7 +914,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- PRODUCT DETAIL PAGE LOGIC ---
-    window.updateQty = function(change) {
+    window.updateQty = function (change) {
         const qtyInput = document.getElementById('qty');
         if (!qtyInput) return;
         let val = parseInt(qtyInput.value) + change;
@@ -922,12 +922,12 @@ document.addEventListener('DOMContentLoaded', () => {
         qtyInput.value = val;
     };
 
-    window.addToCartDetailed = function() {
+    window.addToCartDetailed = function () {
         const urlParamsDetail = new URLSearchParams(window.location.search);
         const productId = urlParamsDetail.get('id');
         const qtyInput = document.getElementById('qty');
         const qty = qtyInput ? parseInt(qtyInput.value) : 1;
-        
+
         const product = productData.find(p => p.id === productId);
         if (product) {
             const existing = cart.find(item => item.id === productId);
@@ -937,7 +937,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const btn = document.querySelector('button[onclick="addToCartDetailed()"]');
-        if(btn) {
+        if (btn) {
             const originalText = btn.innerHTML;
             btn.innerHTML = '<i class="ph-bold ph-check"></i> ĐÃ THÊM';
             btn.classList.add('bg-amber-700');
@@ -948,7 +948,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window.buyNow = function() {
+    window.buyNow = function () {
         window.addToCartDetailed();
         window.location.href = 'cart.html';
     };
@@ -988,7 +988,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    window.changeMainImage = function(thumb, src) {
+    window.changeMainImage = function (thumb, src) {
         const mainImg = document.getElementById('product-img');
         if (mainImg) {
             mainImg.style.opacity = '0';
@@ -997,7 +997,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mainImg.style.opacity = '1';
             }, 200);
         }
-        
+
         // Update active state
         document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
         if (thumb) thumb.classList.add('active');
@@ -1012,7 +1012,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // SEO: Dynamic Title & Meta
             const pageTitle = `${product.name} | Lit Corner - Nến Thơm & Quà Tặng`;
             document.title = pageTitle;
-            
+
             // SEO: Update Meta Description
             let metaDesc = document.querySelector('meta[name="description"]');
             if (!metaDesc) {
@@ -1056,7 +1056,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     "url": window.location.href
                 }
             };
-            
+
             let schemaScript = document.getElementById('product-schema');
             if (!schemaScript) {
                 schemaScript = document.createElement('script');
@@ -1067,15 +1067,15 @@ document.addEventListener('DOMContentLoaded', () => {
             schemaScript.text = JSON.stringify(schemaData);
 
             const breadcrumb = document.getElementById('breadcrumb-current');
-            if(breadcrumb) breadcrumb.innerText = product.name;
+            if (breadcrumb) breadcrumb.innerText = product.name;
             document.getElementById('product-name').innerText = product.name;
             document.getElementById('product-price').innerText = product.price;
             const descEl = document.getElementById('product-desc');
-            if(descEl) descEl.innerText = product.description;
-            
+            if (descEl) descEl.innerText = product.description;
+
             const imgEl = document.getElementById('product-img');
-            if(imgEl) { 
-                imgEl.src = product.image; 
+            if (imgEl) {
+                imgEl.src = product.image;
                 imgEl.alt = product.name;
                 imgEl.style.transition = 'opacity 0.3s ease';
             }
@@ -1085,7 +1085,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (thumbnailGrid) {
                 const galleryImages = [product.image];
                 if (product.imageHover) galleryImages.push(product.imageHover);
-                
+
                 if (galleryImages.length > 1) {
                     thumbnailGrid.innerHTML = galleryImages.map((img, index) => `
                         <div class="product-thumbnail ${index === 0 ? 'active' : ''}" onclick="changeMainImage(this, '${img}')">
@@ -1098,24 +1098,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const catEl = document.getElementById('product-cat');
-            if(catEl) {
+            if (catEl) {
                 const categoryNames = { 'nen-thap': 'Nến Thắp', 'nen-decor': 'Nến Decor', 'phu-kien': 'Phụ Kiện', 'tra': 'Trà', 'gift': 'Quà Tặng' };
                 catEl.innerText = categoryNames[product.category] || 'Sản phẩm';
             }
             // Render specs table, rich description, and usage
             if (typeof getExtendedData === 'function') {
                 const ext = getExtendedData(product);
-                
+
                 const specsTable = document.getElementById('product-specs-table');
                 if (specsTable && ext.specs) {
                     specsTable.innerHTML = ext.specs.map(s => `<tr><td>${s[0]}</td><td>${s[1]}</td></tr>`).join('');
                 }
-                
+
                 const richDesc = document.getElementById('product-rich-description');
                 if (richDesc && ext.rich) {
                     richDesc.innerHTML = ext.rich;
                 }
-                
+
                 const usageEl = document.getElementById('product-usage');
                 if (usageEl && ext.usage) {
                     usageEl.innerHTML = ext.usage;
@@ -1132,7 +1132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return new Intl.NumberFormat('vi-VN').format(num) + 'đ';
     }
 
-    window.renderCartPage = function() {
+    window.renderCartPage = function () {
         const cartContainer = document.getElementById('cart-items-container');
         if (!cartContainer) return;
 
@@ -1193,7 +1193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (totalValEl) totalValEl.innerText = formatPrice(total);
     };
 
-    window.renderCheckoutPage = function() {
+    window.renderCheckoutPage = function () {
         const checkoutItemsContainer = document.getElementById('checkout-items');
         if (!checkoutItemsContainer) return;
 
@@ -1233,7 +1233,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (totalEl) totalEl.innerText = formatPrice(total);
     };
 
-    window.changeQty = function(id, delta) {
+    window.changeQty = function (id, delta) {
         const item = cart.find(i => i.id === id);
         if (item) {
             item.qty += delta;
@@ -1246,7 +1246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window.removeFromStorage = function(id) {
+    window.removeFromStorage = function (id) {
         cart = cart.filter(item => item.id !== id);
         updateCartCount();
         if (window.location.pathname.includes('cart.html')) renderCartPage();
@@ -1263,7 +1263,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const names = ["Khánh Chi", "Thế Anh", "Hoài Nam", "Thanh Trúc", "Bảo Ngọc", "Minh Nhật", "Anh Thư", "Phúc Thịnh", "Chị Lan", "Anh Tú"];
         const times = ["1 phút trước", "3 phút trước", "Vài giây trước", "10 phút trước", "2 phút trước"];
-        
+
         const toast = document.createElement('div');
         toast.id = 'purchase-toast';
         toast.className = 'fixed bottom-6 left-6 z-[90] bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-4 flex items-center gap-4 border border-gray-100/50 translate-x-[-120%] opacity-0 smooth-transition max-w-[320px] pointer-events-none sm:pointer-events-auto';
@@ -1303,7 +1303,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scheduleNext();
             }, nextTime);
         }
-        
+
         setTimeout(() => {
             showNotification();
             scheduleNext();
@@ -1396,12 +1396,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('promo-form');
         const successContent = document.getElementById('promo-success');
         const closeSuccessBtn = document.getElementById('close-promo-success');
-        
+
         if (!popup) return;
 
         // Check if user already saw or closed the popup this session
         const hasSeenPromo = sessionStorage.getItem('seenPromo');
-        
+
         if (!hasSeenPromo) {
             // Show popup after 2.5 seconds
             setTimeout(() => {
@@ -1420,13 +1420,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         closeBtn.addEventListener('click', dismissPopup);
         if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', dismissPopup);
-        
+
         // Close on clicking outside the modal box
         popup.addEventListener('click', (e) => {
             if (e.target === popup) dismissPopup();
         });
 
-        window.submitPromo = function() {
+        window.submitPromo = function () {
             // Simulate form submisson success
             const email = document.getElementById('promo-email').value;
             const phone = document.getElementById('promo-phone').value;
@@ -1434,7 +1434,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 form.classList.add('hidden');
                 successContent.classList.remove('hidden');
                 successContent.classList.add('flex');
-                
+
                 // Optional: Copy code to clipboard automatically
                 navigator.clipboard.writeText('LITNEW15').catch(err => console.log('Clipboard err:', err));
             }

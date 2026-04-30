@@ -573,7 +573,7 @@ html.dark p {
     color: #cccccc !important;
 }
 
-html.dark a:not([class*="bg-"]):not([class*="text-white"]) {
+html.dark a:not([class*="bg-"]):not([class*="text-white"]):not([class*="text-amber"]) {
     color: #d4d4d4 !important;
 }
 

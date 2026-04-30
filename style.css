@@ -10,6 +10,78 @@ body {
 .hero-title {
     letter-spacing: -0.04em;
     line-height: 1.1;
+    text-wrap: balance;
+}
+
+/* ===========================
+   TYPOGRAPHY POLISH
+   =========================== */
+
+/* Balanced heading wrap - prevents awkward single-word last lines */
+h1, h2, h3 {
+    text-wrap: balance;
+}
+
+/* Justified body text for clean, editorial look in content sections */
+.content-prose p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    line-height: 1.85;
+}
+
+/* Founder story text - justified for clean block feel */
+.founder-text p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    line-height: 1.85;
+}
+
+/* Section lead text (centered sections) - balanced wrap */
+.section-lead {
+    text-wrap: balance;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Product description in feature cards - clean left-aligned */
+.feature-card-desc {
+    text-align: left;
+    line-height: 1.75;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Uniform card content alignment */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ===========================
+   LAYOUT CONSISTENCY 
+   =========================== */
+
+/* Consistent section inner max-width for readability */
+.section-inner {
+    max-width: 72ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Clean divider between sections */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(44, 62, 53, 0.1), transparent);
+    margin: 0 auto;
+    max-width: 80%;
 }
 
 .soft-shadow {
@@ -56,6 +128,37 @@ body {
     margin-top: 2rem;
     margin-bottom: 0.75rem;
 }
+
+
+/* ===========================
+   PRODUCT RICH CONTENT
+   =========================== */
+
+#product-specs-table tr:nth-child(odd) { background-color: #f9fafb; }
+#product-specs-table tr:nth-child(even) { background-color: #ffffff; }
+#product-specs-table td { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; }
+#product-specs-table td:first-child { font-weight: 700; color: #555; width: 40%; white-space: nowrap; }
+#product-specs-table td:last-child { color: #1A1A1A; }
+
+html.dark #product-specs-table tr:nth-child(odd) { background-color: #1a1a1a; }
+html.dark #product-specs-table tr:nth-child(even) { background-color: #222; }
+html.dark #product-specs-table td { border-bottom-color: #333; }
+html.dark #product-specs-table td:first-child { color: #aaa; }
+html.dark #product-specs-table td:last-child { color: #e5e5e5; }
+
+.product-rich-content { font-size: 15px; line-height: 1.85; color: #333; }
+.product-rich-content h4 { font-size: 1.2rem; font-weight: 800; margin: 2rem 0 0.75rem; color: #2C3E35; }
+.product-rich-content p { margin-bottom: 1rem; opacity: 0.85; text-align: justify; }
+.product-rich-content ul { list-style: none; padding-left: 0; margin-bottom: 1.25rem; }
+.product-rich-content ul li { position: relative; padding-left: 1.5rem; margin-bottom: 0.6rem; opacity: 0.85; }
+.product-rich-content ul li::before { content: '✓'; position: absolute; left: 0; color: #B45309; font-weight: 700; }
+.product-rich-content blockquote { border-left: 4px solid #B45309; padding: 1rem 1.5rem; background: #FFFBEB; margin: 1.5rem 0; border-radius: 0 12px 12px 0; font-style: italic; color: #78350F; }
+.product-rich-content .highlight-box { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border: 1px solid #bbf7d0; border-radius: 16px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+
+html.dark .product-rich-content { color: #ccc; }
+html.dark .product-rich-content h4 { color: #b0c4b1; }
+html.dark .product-rich-content blockquote { background: #1a2620; border-color: #B45309; color: #fbbf24; }
+html.dark .product-rich-content .highlight-box { background: #1a2620; border-color: #333; }
 
 
 /* ===========================

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cửa Hàng | Lit Corner</title>
+    <title>Cửa Hàng Nến Thơm & Quà Tặng Thủ Công | Lit Corner</title>
+    <meta name="description" content="Khám phá bộ sưu tập nến thơm tự nhiên, trà thanh lọc và phụ kiện decor tối giản tại Lit Corner. Sản phẩm thủ công cao cấp cho không gian sống an yên.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -315,29 +317,38 @@
 
     <!-- Promo Popup -->
     <div id="promo-popup" class="fixed inset-0 z-[150] bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none smooth-transition px-4">
-        <div class="bg-white rounded-3xl w-full max-w-md overflow-hidden shadow-2xl scale-95 transition-transform duration-500 ease-out relative">
-            <button id="close-promo" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-black/5 text-gray-500 hover:bg-black/10 hover:text-black smooth-transition z-10">
+        <div class="bg-white rounded-3xl w-full max-w-md overflow-hidden shadow-[0_0_40px_rgba(180,83,9,0.2)] dark:shadow-[0_0_40px_rgba(180,83,9,0.15)] scale-95 transition-transform duration-500 ease-out relative border-2 border-transparent dark:border-amber-700/30">
+            <button id="close-promo" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-black/5 text-gray-500 hover:bg-black/10 hover:text-black smooth-transition z-20">
                 <i class="ph-bold ph-x"></i>
             </button>
-            <div class="h-32 bg-[url('Assets/Image/hero_banner_focus.png')] bg-cover bg-center relative">
-                <div class="absolute inset-0 bg-[#2C3E35]/60 mix-blend-multiply"></div>
+            <div class="h-36 bg-[url('Assets/Image/hero_banner_focus.png')] bg-cover bg-center relative">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#2C3E35]/80 to-[#2C3E35]/95 mix-blend-multiply"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <i class="ph-fill ph-gift text-5xl text-amber-400 drop-shadow-md"></i>
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-amber-400 blur-xl opacity-40 animate-pulse"></div>
+                        <i class="ph-fill ph-gift text-6xl text-amber-400 relative z-10 animate-bounce" style="animation-duration: 2s;"></i>
+                    </div>
                 </div>
             </div>
-            <div class="p-8 text-center">
-                <h3 class="text-2xl font-extrabold text-[#2C3E35] mb-2 tracking-tight">Chào bạn mới!</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Nhập email và số điện thoại để nhận ngay <strong class="text-amber-700">Mã giảm giá 15%</strong> cho đơn hàng đầu tiên của bạn tại Lit Corner.</p>
+            <div class="p-8 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <h3 class="text-3xl font-black text-[#2C3E35] mb-2 tracking-tight">Chào bạn mới!</h3>
+                <p class="text-gray-500 text-[15px] mb-6 leading-relaxed">Nhập email và số điện thoại để nhận ngay <br>
+                    <strong class="text-amber-600 bg-amber-50 dark:bg-amber-900/30 px-3 py-1.5 rounded-lg text-xl inline-block my-2 shadow-sm border border-amber-200 dark:border-amber-700/50 uppercase tracking-widest animate-[pulse_3s_ease-in-out_infinite]">Mã giảm giá 15%</strong><br>
+                    cho đơn hàng đầu tiên tại Lit Corner.
+                </p>
                 
                 <form id="promo-form" class="space-y-4" onsubmit="event.preventDefault(); submitPromo();">
                     <div class="relative text-left flex flex-col gap-3">
                         <input type="email" id="promo-email" placeholder="Địa chỉ email..." required
-                            class="w-full bg-[#F9F9F7] border border-gray-200 rounded-xl px-4 py-3 outline-none text-sm focus:border-amber-700 focus:bg-white smooth-transition">
+                            class="w-full bg-[#F9F9F7] border border-gray-200 rounded-xl px-4 py-3.5 outline-none text-[15px] focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 focus:bg-white smooth-transition">
                         <input type="tel" id="promo-phone" placeholder="Số điện thoại..." required
-                            class="w-full bg-[#F9F9F7] border border-gray-200 rounded-xl px-4 py-3 outline-none text-sm focus:border-amber-700 focus:bg-white smooth-transition">
+                            class="w-full bg-[#F9F9F7] border border-gray-200 rounded-xl px-4 py-3.5 outline-none text-[15px] focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 focus:bg-white smooth-transition">
                     </div>
-                    <button type="submit" class="w-full bg-[#2C3E35] hover:bg-amber-700 text-white font-bold py-3 rounded-xl smooth-transition shadow-md shadow-[#2C3E35]/20 hover:shadow-amber-700/30">
-                        Nhận mã ưu đãi
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white font-black py-4 rounded-xl smooth-transition shadow-[0_8px_20px_rgba(180,83,9,0.25)] hover:shadow-[0_10px_25px_rgba(180,83,9,0.4)] hover:-translate-y-1 text-lg uppercase tracking-wider relative overflow-hidden group">
+                        <span class="relative z-10">Nhận mã ưu đãi</span>
+                        <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[light-sweep_1.5s_ease-in-out_infinite]"></div>
                     </button>
                 </form>
                 <div id="promo-success" class="hidden flex-col items-center justify-center py-2 animate-fade-in">
@@ -505,4 +516,5 @@
 </body>
 
 </html>
+
 

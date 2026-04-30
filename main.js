@@ -1009,7 +1009,63 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!productId || !document.getElementById('product-name')) return;
         const product = productData.find(p => p.id === productId);
         if (product) {
-            document.title = `${product.name} | Lit Corner`;
+            // SEO: Dynamic Title & Meta
+            const pageTitle = `${product.name} | Lit Corner - Nến Thơm & Quà Tặng`;
+            document.title = pageTitle;
+            
+            // SEO: Update Meta Description
+            let metaDesc = document.querySelector('meta[name="description"]');
+            if (!metaDesc) {
+                metaDesc = document.createElement('meta');
+                metaDesc.setAttribute('name', 'description');
+                document.head.appendChild(metaDesc);
+            }
+            metaDesc.setAttribute('content', `${product.name} - ${product.description}. Mua ngay nến thơm thủ công cao cấp tại Lit Corner.`);
+
+            // SEO: Open Graph
+            const updateOG = (property, content) => {
+                let og = document.querySelector(`meta[property="${property}"]`);
+                if (!og) {
+                    og = document.createElement('meta');
+                    og.setAttribute('property', property);
+                    document.head.appendChild(og);
+                }
+                og.setAttribute('content', content);
+            };
+            updateOG('og:title', pageTitle);
+            updateOG('og:description', product.description);
+            updateOG('og:image', product.image);
+            updateOG('og:type', 'product');
+
+            // SEO: JSON-LD Structured Data
+            const schemaData = {
+                "@context": "https://schema.org/",
+                "@type": "Product",
+                "name": product.name,
+                "image": [product.image],
+                "description": product.description,
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Lit Corner"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "VND",
+                    "price": product.price.replace(/\D/g, ''),
+                    "availability": "https://schema.org/InStock",
+                    "url": window.location.href
+                }
+            };
+            
+            let schemaScript = document.getElementById('product-schema');
+            if (!schemaScript) {
+                schemaScript = document.createElement('script');
+                schemaScript.id = 'product-schema';
+                schemaScript.type = 'application/ld+json';
+                document.head.appendChild(schemaScript);
+            }
+            schemaScript.text = JSON.stringify(schemaData);
+
             const breadcrumb = document.getElementById('breadcrumb-current');
             if(breadcrumb) breadcrumb.innerText = product.name;
             document.getElementById('product-name').innerText = product.name;
@@ -1046,9 +1102,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 const categoryNames = { 'nen-thap': 'Nến Thắp', 'nen-decor': 'Nến Decor', 'phu-kien': 'Phụ Kiện', 'tra': 'Trà', 'gift': 'Quà Tặng' };
                 catEl.innerText = categoryNames[product.category] || 'Sản phẩm';
             }
-            const detailsList = document.getElementById('product-details-list');
-            if(detailsList) {
-                detailsList.innerHTML = product.details.map(d => `<li class="flex items-start gap-3 opacity-70"><i class="ph-bold ph-check-circle text-amber-700 mt-1"></i> <span>${d}</span></li>`).join('');
+            // Render specs table, rich description, and usage
+            if (typeof getExtendedData === 'function') {
+                const ext = getExtendedData(product);
+                
+                const specsTable = document.getElementById('product-specs-table');
+                if (specsTable && ext.specs) {
+                    specsTable.innerHTML = ext.specs.map(s => `<tr><td>${s[0]}</td><td>${s[1]}</td></tr>`).join('');
+                }
+                
+                const richDesc = document.getElementById('product-rich-description');
+                if (richDesc && ext.rich) {
+                    richDesc.innerHTML = ext.rich;
+                }
+                
+                const usageEl = document.getElementById('product-usage');
+                if (usageEl && ext.usage) {
+                    usageEl.innerHTML = ext.usage;
+                }
             }
             renderRelatedProducts(product.category, product.id);
         }

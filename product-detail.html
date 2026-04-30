@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi" class="scroll-smooth">
 
 <head>
@@ -13,6 +13,7 @@
     </script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <script>
         // Apply theme immediately to prevent flash of wrong theme
@@ -157,7 +158,7 @@
                     <div class="mb-4">
                         <span id="product-cat" class="text-xs uppercase tracking-widest font-bold text-amber-700 bg-amber-700/10 px-3 py-1 rounded-full">Danh mục</span>
                     </div>
-                    <h1 id="product-name" class="hero-title text-5xl font-extrabold mb-4">Tên sản phẩm</h1>
+                    <h1 id="product-name" class="hero-title text-5xl font-extrabold mb-4 focus:outline-none">Nến Thơm Cao Cấp | Lit Corner</h1>
                     <p id="product-price" class="text-3xl font-bold text-amber-700 mb-8">0đ</p>
                     
                     <p id="product-desc" class="text-lg opacity-70 font-light leading-relaxed mb-6">
@@ -206,17 +207,54 @@
                         </div>
                     </div>
 
-                    <!-- Additional Details -->
-                    <div class="border-t border-gray-200 pt-10">
-                        <h3 class="font-extrabold text-xl mb-6">Chi tiết sản phẩm</h3>
-                        <ul id="product-details-list" class="space-y-4">
-                            <!-- Populated by JS -->
-                        </ul>
+                    <!-- Product Specifications Table -->
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-10">
+                        <h3 class="font-extrabold text-xl mb-6 flex items-center gap-2 dark:text-white">
+                            <i class="ph-fill ph-list-bullets text-amber-700"></i> Thông tin sản phẩm
+                        </h3>
+                        <div class="border border-gray-100 dark:border-gray-700 rounded-2xl overflow-hidden">
+                            <table id="product-specs-table" class="w-full text-sm">
+                                <!-- Populated by JS -->
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Rich Product Description Section -->
+    <section id="product-rich-section" class="py-16 bg-white dark:bg-[#222] border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex gap-1 border-b border-gray-200 dark:border-gray-700 mb-10 overflow-x-auto" id="rich-tabs">
+                <button class="rich-tab active whitespace-nowrap px-6 py-4 font-bold text-sm border-b-2 border-amber-700 text-[#2C3E35] dark:text-white smooth-transition" data-target="tab-desc" onclick="switchRichTab(this)">
+                    <i class="ph-fill ph-article mr-1.5"></i> Mô tả chi tiết
+                </button>
+                <button class="rich-tab whitespace-nowrap px-6 py-4 font-bold text-sm border-b-2 border-transparent text-gray-400 hover:text-[#2C3E35] dark:hover:text-white smooth-transition" data-target="tab-usage" onclick="switchRichTab(this)">
+                    <i class="ph-fill ph-book-open mr-1.5"></i> Hướng dẫn sử dụng
+                </button>
+            </div>
+            <div id="tab-desc" class="rich-tab-content">
+                <div id="product-rich-description" class="product-rich-content"></div>
+            </div>
+            <div id="tab-usage" class="rich-tab-content hidden">
+                <div id="product-usage" class="product-rich-content"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function switchRichTab(btn) {
+            document.querySelectorAll('.rich-tab').forEach(t => {
+                t.classList.remove('active','border-amber-700','text-[#2C3E35]','dark:text-white');
+                t.classList.add('border-transparent','text-gray-400');
+            });
+            btn.classList.add('active','border-amber-700','text-[#2C3E35]','dark:text-white');
+            btn.classList.remove('border-transparent','text-gray-400');
+            document.querySelectorAll('.rich-tab-content').forEach(c => c.classList.add('hidden'));
+            document.getElementById(btn.dataset.target).classList.remove('hidden');
+        }
+    </script>
 
     <!-- Brand Values Concept -->
     <section class="py-24 bg-white">
@@ -360,6 +398,7 @@
         </div>
     </div>
 
+    <script src="product-extended-data.js"></script>
     <script src="main.js"></script>
 </body>
 
